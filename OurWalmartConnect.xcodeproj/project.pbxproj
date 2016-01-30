@@ -14,6 +14,26 @@
 		B175C5EB1C5C3857002CF263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B175C5E91C5C3857002CF263 /* LaunchScreen.storyboard */; };
 		B175C5F61C5C3857002CF263 /* OurWalmartConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175C5F51C5C3857002CF263 /* OurWalmartConnectTests.swift */; };
 		B175C6011C5C3857002CF263 /* OurWalmartConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175C6001C5C3857002CF263 /* OurWalmartConnectUITests.swift */; };
+		B175C6161C5C3B72002CF263 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6101C5C3B72002CF263 /* Bolts.framework */; };
+		B175C6171C5C3B72002CF263 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6111C5C3B72002CF263 /* Parse.framework */; };
+		B175C6181C5C3B72002CF263 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6121C5C3B72002CF263 /* ParseFacebookUtils.framework */; };
+		B175C6191C5C3B72002CF263 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6131C5C3B72002CF263 /* ParseFacebookUtilsV4.framework */; };
+		B175C61A1C5C3B72002CF263 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6141C5C3B72002CF263 /* ParseTwitterUtils.framework */; };
+		B175C61B1C5C3B72002CF263 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6151C5C3B72002CF263 /* ParseUI.framework */; };
+		B175C61D1C5C3C40002CF263 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C61C1C5C3C40002CF263 /* MobileCoreServices.framework */; };
+		B175C61F1C5C3C49002CF263 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C61E1C5C3C49002CF263 /* libsqlite3.tbd */; };
+		B175C6211C5C3CC2002CF263 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6201C5C3CC2002CF263 /* AudioToolbox.framework */; };
+		B175C6231C5C3CCA002CF263 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6221C5C3CC9002CF263 /* CFNetwork.framework */; };
+		B175C6251C5C3CD2002CF263 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6241C5C3CD2002CF263 /* CoreGraphics.framework */; };
+		B175C6271C5C3CD9002CF263 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6261C5C3CD9002CF263 /* CoreLocation.framework */; };
+		B175C6291C5C3CE1002CF263 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6281C5C3CE1002CF263 /* QuartzCore.framework */; };
+		B175C62B1C5C3CE9002CF263 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C62A1C5C3CE9002CF263 /* Security.framework */; };
+		B175C62D1C5C3CF2002CF263 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C62C1C5C3CF2002CF263 /* StoreKit.framework */; };
+		B175C62F1C5C3CFD002CF263 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C62E1C5C3CFD002CF263 /* SystemConfiguration.framework */; };
+		B175C6311C5C3D07002CF263 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6301C5C3D07002CF263 /* libz.tbd */; };
+		B175C6361C5C3E99002CF263 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6331C5C3E99002CF263 /* FBSDKCoreKit.framework */; };
+		B175C6371C5C3E99002CF263 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6341C5C3E99002CF263 /* FBSDKLoginKit.framework */; };
+		B175C6381C5C3E99002CF263 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6351C5C3E99002CF263 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +67,26 @@
 		B175C5FC1C5C3857002CF263 /* OurWalmartConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OurWalmartConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B175C6001C5C3857002CF263 /* OurWalmartConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurWalmartConnectUITests.swift; sourceTree = "<group>"; };
 		B175C6021C5C3857002CF263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B175C6101C5C3B72002CF263 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B175C6111C5C3B72002CF263 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B175C6121C5C3B72002CF263 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		B175C6131C5C3B72002CF263 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		B175C6141C5C3B72002CF263 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		B175C6151C5C3B72002CF263 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		B175C61C1C5C3C40002CF263 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B175C61E1C5C3C49002CF263 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B175C6201C5C3CC2002CF263 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B175C6221C5C3CC9002CF263 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B175C6241C5C3CD2002CF263 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B175C6261C5C3CD9002CF263 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B175C6281C5C3CE1002CF263 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B175C62A1C5C3CE9002CF263 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B175C62C1C5C3CF2002CF263 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B175C62E1C5C3CFD002CF263 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B175C6301C5C3D07002CF263 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B175C6331C5C3E99002CF263 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B175C6341C5C3E99002CF263 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B175C6351C5C3E99002CF263 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +94,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B175C61F1C5C3C49002CF263 /* libsqlite3.tbd in Frameworks */,
+				B175C6311C5C3D07002CF263 /* libz.tbd in Frameworks */,
+				B175C62F1C5C3CFD002CF263 /* SystemConfiguration.framework in Frameworks */,
+				B175C62D1C5C3CF2002CF263 /* StoreKit.framework in Frameworks */,
+				B175C62B1C5C3CE9002CF263 /* Security.framework in Frameworks */,
+				B175C6291C5C3CE1002CF263 /* QuartzCore.framework in Frameworks */,
+				B175C6271C5C3CD9002CF263 /* CoreLocation.framework in Frameworks */,
+				B175C6361C5C3E99002CF263 /* FBSDKCoreKit.framework in Frameworks */,
+				B175C6251C5C3CD2002CF263 /* CoreGraphics.framework in Frameworks */,
+				B175C6231C5C3CCA002CF263 /* CFNetwork.framework in Frameworks */,
+				B175C6211C5C3CC2002CF263 /* AudioToolbox.framework in Frameworks */,
+				B175C61D1C5C3C40002CF263 /* MobileCoreServices.framework in Frameworks */,
+				B175C6381C5C3E99002CF263 /* FBSDKShareKit.framework in Frameworks */,
+				B175C61B1C5C3B72002CF263 /* ParseUI.framework in Frameworks */,
+				B175C6371C5C3E99002CF263 /* FBSDKLoginKit.framework in Frameworks */,
+				B175C6171C5C3B72002CF263 /* Parse.framework in Frameworks */,
+				B175C6161C5C3B72002CF263 /* Bolts.framework in Frameworks */,
+				B175C6191C5C3B72002CF263 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				B175C6181C5C3B72002CF263 /* ParseFacebookUtils.framework in Frameworks */,
+				B175C61A1C5C3B72002CF263 /* ParseTwitterUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +157,8 @@
 		B175C5DF1C5C3857002CF263 /* OurWalmartConnect */ = {
 			isa = PBXGroup;
 			children = (
+				B175C6321C5C3D3E002CF263 /* Frameworks */,
+				B175C60F1C5C3B72002CF263 /* parseFramework */,
 				B175C5E01C5C3857002CF263 /* AppDelegate.swift */,
 				B175C5E21C5C3857002CF263 /* ViewController.swift */,
 				B175C5E41C5C3857002CF263 /* Main.storyboard */,
@@ -123,6 +185,41 @@
 				B175C6021C5C3857002CF263 /* Info.plist */,
 			);
 			path = OurWalmartConnectUITests;
+			sourceTree = "<group>";
+		};
+		B175C60F1C5C3B72002CF263 /* parseFramework */ = {
+			isa = PBXGroup;
+			children = (
+				B175C6331C5C3E99002CF263 /* FBSDKCoreKit.framework */,
+				B175C6341C5C3E99002CF263 /* FBSDKLoginKit.framework */,
+				B175C6351C5C3E99002CF263 /* FBSDKShareKit.framework */,
+				B175C6101C5C3B72002CF263 /* Bolts.framework */,
+				B175C6111C5C3B72002CF263 /* Parse.framework */,
+				B175C6121C5C3B72002CF263 /* ParseFacebookUtils.framework */,
+				B175C6131C5C3B72002CF263 /* ParseFacebookUtilsV4.framework */,
+				B175C6141C5C3B72002CF263 /* ParseTwitterUtils.framework */,
+				B175C6151C5C3B72002CF263 /* ParseUI.framework */,
+			);
+			path = parseFramework;
+			sourceTree = "<group>";
+		};
+		B175C6321C5C3D3E002CF263 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B175C6301C5C3D07002CF263 /* libz.tbd */,
+				B175C62E1C5C3CFD002CF263 /* SystemConfiguration.framework */,
+				B175C62C1C5C3CF2002CF263 /* StoreKit.framework */,
+				B175C62A1C5C3CE9002CF263 /* Security.framework */,
+				B175C6281C5C3CE1002CF263 /* QuartzCore.framework */,
+				B175C6261C5C3CD9002CF263 /* CoreLocation.framework */,
+				B175C6241C5C3CD2002CF263 /* CoreGraphics.framework */,
+				B175C6221C5C3CC9002CF263 /* CFNetwork.framework */,
+				B175C6201C5C3CC2002CF263 /* AudioToolbox.framework */,
+				B175C61E1C5C3C49002CF263 /* libsqlite3.tbd */,
+				B175C61C1C5C3C40002CF263 /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +496,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OurWalmartConnect/parseFramework",
+				);
 				INFOPLIST_FILE = OurWalmartConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = David.OurWalmartConnect;
@@ -410,6 +511,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OurWalmartConnect/parseFramework",
+				);
 				INFOPLIST_FILE = OurWalmartConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = David.OurWalmartConnect;
