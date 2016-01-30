@@ -81,6 +81,13 @@
 		B1C2633B1C5C46CE00A44BE3 /* JSQMessagesToolbarContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C2630B1C5C46CE00A44BE3 /* JSQMessagesToolbarContentView.xib */; };
 		B1C2633C1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C2630D1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.m */; };
 		B1C2633D1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C2630E1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.xib */; };
+		B1C2634C1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2634B1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift */; };
+		B1C2634E1C5C4A9B00A44BE3 /* OWCChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2634D1C5C4A9B00A44BE3 /* OWCChatViewController.swift */; };
+		B1D2E1051C5C4F26009A5A3B /* OWCChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1041C5C4F26009A5A3B /* OWCChatManager.swift */; };
+		B1D2E1071C5C4F99009A5A3B /* OWCChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1061C5C4F99009A5A3B /* OWCChatMessage.swift */; };
+		B1D2E1091C5C5037009A5A3B /* ParseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1081C5C5037009A5A3B /* ParseFunctions.swift */; };
+		B1D2E10B1C5C505A009A5A3B /* OWCAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E10A1C5C505A009A5A3B /* OWCAppConstants.swift */; };
+		B1D2E10E1C5C608B009A5A3B /* OWCUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E10D1C5C608B009A5A3B /* OWCUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,7 +234,14 @@
 		B1C2630C1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQMessagesTypingIndicatorFooterView.h; sourceTree = "<group>"; };
 		B1C2630D1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesTypingIndicatorFooterView.m; sourceTree = "<group>"; };
 		B1C2630E1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQMessagesTypingIndicatorFooterView.xib; sourceTree = "<group>"; };
-		B1C263491C5C488B00A44BE3 /* OurWalmartConnect-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OurWalmartConnect-Bridging-Header.h"; sourceTree = "<group>"; };
+		B1C2634B1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCChatListTableViewController.swift; sourceTree = "<group>"; };
+		B1C2634D1C5C4A9B00A44BE3 /* OWCChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCChatViewController.swift; sourceTree = "<group>"; };
+		B1D2E1031C5C4DD9009A5A3B /* OurWalmart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OurWalmart-Bridging-Header.h"; sourceTree = "<group>"; };
+		B1D2E1041C5C4F26009A5A3B /* OWCChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCChatManager.swift; sourceTree = "<group>"; };
+		B1D2E1061C5C4F99009A5A3B /* OWCChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCChatMessage.swift; sourceTree = "<group>"; };
+		B1D2E1081C5C5037009A5A3B /* ParseFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseFunctions.swift; sourceTree = "<group>"; };
+		B1D2E10A1C5C505A009A5A3B /* OWCAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCAppConstants.swift; sourceTree = "<group>"; };
+		B1D2E10D1C5C608B009A5A3B /* OWCUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C262A41C5C414400A44BE3 /* Core */,
+				B1D2E10C1C5C605D009A5A3B /* Utility */,
 				B1C2633E1C5C46D900A44BE3 /* ObjectiveC */,
 				B1C262AC1C5C46A100A44BE3 /* Chat */,
 				B1C262A51C5C415700A44BE3 /* LoginSignup */,
@@ -369,6 +384,7 @@
 				B175C5E91C5C3857002CF263 /* LaunchScreen.storyboard */,
 				B175C5E41C5C3857002CF263 /* Main.storyboard */,
 				B175C5E01C5C3857002CF263 /* AppDelegate.swift */,
+				B1D2E10A1C5C505A009A5A3B /* OWCAppConstants.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -386,8 +402,12 @@
 		B1C262AC1C5C46A100A44BE3 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				B1C262AF1C5C46CE00A44BE3 /* JSQSystemSoundPlayer */,
-				B1C263101C5C46CE00A44BE3 /* JSQMessagesViewController */,
+				B1D2E1081C5C5037009A5A3B /* ParseFunctions.swift */,
+				B1D2E1041C5C4F26009A5A3B /* OWCChatManager.swift */,
+				B1D2E1061C5C4F99009A5A3B /* OWCChatMessage.swift */,
+				B1C2634B1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift */,
+				B1C2634D1C5C4A9B00A44BE3 /* OWCChatViewController.swift */,
+				B1C2634A1C5C494E00A44BE3 /* ChatFrameworks */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -558,9 +578,26 @@
 		B1C2633E1C5C46D900A44BE3 /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
-				B1C263491C5C488B00A44BE3 /* OurWalmartConnect-Bridging-Header.h */,
+				B1D2E1031C5C4DD9009A5A3B /* OurWalmart-Bridging-Header.h */,
 			);
 			name = ObjectiveC;
+			sourceTree = "<group>";
+		};
+		B1C2634A1C5C494E00A44BE3 /* ChatFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1C262AF1C5C46CE00A44BE3 /* JSQSystemSoundPlayer */,
+				B1C263101C5C46CE00A44BE3 /* JSQMessagesViewController */,
+			);
+			name = ChatFrameworks;
+			sourceTree = "<group>";
+		};
+		B1D2E10C1C5C605D009A5A3B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B1D2E10D1C5C608B009A5A3B /* OWCUtilities.swift */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -631,6 +668,12 @@
 				TargetAttributes = {
 					B175C5DC1C5C3856002CF263 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 72FC7F34T6;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					B175C5F01C5C3857002CF263 = {
 						CreatedOnToolsVersion = 7.2;
@@ -708,6 +751,7 @@
 				B1C2632E1C5C46CE00A44BE3 /* JSQMessagesCollectionView.m in Sources */,
 				B1C263241C5C46CE00A44BE3 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				B1C263111C5C46CE00A44BE3 /* JSQSystemSoundPlayer.m in Sources */,
+				B1D2E10B1C5C505A009A5A3B /* OWCAppConstants.swift in Sources */,
 				B1C263341C5C46CE00A44BE3 /* JSQMessagesComposerTextView.m in Sources */,
 				B1C2631D1C5C46CE00A44BE3 /* JSQMessagesAvatarImageFactory.m in Sources */,
 				B1C2632C1C5C46CE00A44BE3 /* JSQVideoMediaItem.m in Sources */,
@@ -719,6 +763,7 @@
 				B1C262AB1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift in Sources */,
 				B1C263151C5C46CE00A44BE3 /* NSString+JSQMessages.m in Sources */,
 				B1C262A91C5C419A00A44BE3 /* OWCSignupViewController.swift in Sources */,
+				B1C2634E1C5C4A9B00A44BE3 /* OWCChatViewController.swift in Sources */,
 				B1C263211C5C46CE00A44BE3 /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				B1C2632A1C5C46CE00A44BE3 /* JSQMessagesBubbleImage.m in Sources */,
 				B1C263351C5C46CE00A44BE3 /* JSQMessagesInputToolbar.m in Sources */,
@@ -729,7 +774,9 @@
 				B1C2631E1C5C46CE00A44BE3 /* JSQMessagesBubbleImageFactory.m in Sources */,
 				B1C263391C5C46CE00A44BE3 /* JSQMessagesMediaPlaceholderView.m in Sources */,
 				B1C263371C5C46CE00A44BE3 /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
+				B1D2E1071C5C4F99009A5A3B /* OWCChatMessage.swift in Sources */,
 				B1C263191C5C46CE00A44BE3 /* UIView+JSQMessages.m in Sources */,
+				B1D2E10E1C5C608B009A5A3B /* OWCUtilities.swift in Sources */,
 				B1C263261C5C46CE00A44BE3 /* JSQLocationMediaItem.m in Sources */,
 				B1C263161C5C46CE00A44BE3 /* UIColor+JSQMessages.m in Sources */,
 				B1C263131C5C46CE00A44BE3 /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
@@ -738,9 +785,12 @@
 				B1C2632F1C5C46CE00A44BE3 /* JSQMessagesCollectionViewCell.m in Sources */,
 				B1C263301C5C46CE00A44BE3 /* JSQMessagesCollectionViewCellIncoming.m in Sources */,
 				B1C2632B1C5C46CE00A44BE3 /* JSQPhotoMediaItem.m in Sources */,
+				B1C2634C1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift in Sources */,
 				B175C5E11C5C3857002CF263 /* AppDelegate.swift in Sources */,
 				B1C263231C5C46CE00A44BE3 /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
+				B1D2E1051C5C4F26009A5A3B /* OWCChatManager.swift in Sources */,
 				B1C263141C5C46CE00A44BE3 /* NSBundle+JSQMessages.m in Sources */,
+				B1D2E1091C5C5037009A5A3B /* ParseFunctions.swift in Sources */,
 				B1C263291C5C46CE00A44BE3 /* JSQMessagesAvatarImage.m in Sources */,
 				B1C263181C5C46CE00A44BE3 /* UIImage+JSQMessages.m in Sources */,
 			);
@@ -884,14 +934,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OurWalmartConnect/parseFramework",
 				);
 				INFOPLIST_FILE = OurWalmartConnect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = David.OurWalmartConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "./OurWalmartConnect/OurWalmart-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -899,14 +954,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OurWalmartConnect/parseFramework",
 				);
 				INFOPLIST_FILE = OurWalmartConnect/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = David.OurWalmartConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "./OurWalmartConnect/OurWalmart-Bridging-Header.h";
 			};
 			name = Release;
 		};

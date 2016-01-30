@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 
+        // Configure Push Notification
+        self.configurePushNotifications(application)
+
         
         return true
     }
@@ -60,6 +63,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    // Configure Push Notifications
+    func configurePushNotifications(application: UIApplication) {
+        
+        if application.respondsToSelector("registerUserNotificationSettings:") {
+            // Configure for Alerts,Badge Updates, and Sound
+            let userNotificationsTypes: UIUserNotificationType = ([UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound])
+            let settings = UIUserNotificationSettings(forTypes: userNotificationsTypes, categories: nil)
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+        }
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("Failed to register for push notifications!\nError:\(error.localizedDescription)")
+        print(error)
+    }
+    
+    // MARK: - Push Notification Callback
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.channels = ["global"]
+        currentInstallation.saveInBackground()
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print("didReceiveRemoteNotification bloop")
+        print(userInfo["pushType"] as? String)
+        
+        // Handle push notifications when app is active
+        if application.applicationState == .Active {
+            
+            PFPush.handlePush(userInfo)
+            //Handle push notification when app is in background
+        } else {
+            PFPush.handlePush(userInfo)
+            
+        }
+        
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("recievedMessage", object: self)
+        let installation = PFInstallation.currentInstallation()
+        installation["user"] = PFUser.currentUser()
+        installation.saveInBackground()
+    }
+
 
 
 }
