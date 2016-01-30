@@ -10,10 +10,18 @@ import UIKit
 
 class OWCFirstLaunchViewController: UIViewController {
 
+
+    var skipNumber = 50 * 16
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print("Skip number: \(skipNumber)")
+        self.loadGeoLocations(skipNumber)
+        skipNumber += 50
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +32,7 @@ class OWCFirstLaunchViewController: UIViewController {
 
  
     @IBAction func SignUpButtonPressed(sender: AnyObject) {
+        
         PFUser.logInWithUsernameInBackground("test2", password: "1", block: { (user, error) -> Void in
             
             // REMOVE BEFORE RELEASE
@@ -38,6 +47,43 @@ class OWCFirstLaunchViewController: UIViewController {
 
         self.performSegueWithIdentifier("loggedIn", sender: nil)
     }
+    
+    func loadGeoLocations(skipNumber:Int){
+        
+        let query = PFQuery(className: "walmartLocations")
+        query.limit = 50
+        query.skip = skipNumber
+        query.findObjectsInBackgroundWithBlock { (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            print("number of items \(objects?.count)")
+            if error == nil {
+                
+                for items in objects! {
+                    
+                    let geocoder = CLGeocoder()
+                    geocoder.geocodeAddressString((objects![0].objectForKey("Address") as! String)+","+(objects![0].objectForKey("State") as! String), completionHandler: {(placemarks, error) -> Void in
+                        print((items.objectForKey("Address") as! String))
+                        if((error) != nil){
+                            print("Error", error)
+                        }
+                        if let placemark = placemarks?.first {
+                            let coordinates:CLLocation = placemark.location!
+                            let location = PFGeoPoint(location: coordinates)
+                            items.setValue(location, forKey: "Location")
+                            items.saveInBackground()
+                            print(coordinates)
+                        }else{
+                            print("error getting coordinates")
+                        }
+                    })
+                    
+                    
+                }
+                
+            }
+        }
+    }
+
     
     @IBAction func loginButtonPressed(sender: AnyObject) {
 //        let user = PFUser()

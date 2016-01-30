@@ -10,6 +10,10 @@ import UIKit
 
 class OWCLoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +23,30 @@ class OWCLoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        
+
+
+    
+
+        PFUser.logOut()
+        PFUser.logInWithUsernameInBackground(self.emailTextField.text!, password: self.passwordTextField.text!, block: { (user, error) -> Void in
+            
+            // REMOVE BEFORE RELEASE
+            if error != nil {
+                print("logged in")
+            } else {
+                print("error loggin in")
+            }
+            
+            
+        })
+        
+        self.performSegueWithIdentifier("loggedIn", sender: nil)
+        
+        
     }
     
 
@@ -31,5 +59,6 @@ class OWCLoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
 }
