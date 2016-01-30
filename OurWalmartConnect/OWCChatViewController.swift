@@ -18,8 +18,8 @@ class OWCChatViewController: JSQMessagesViewController {
     var aChatManager:OWCChatManager?
     
     //defualt profile image
-    var senderAvatarImage:UIImage = UIImage(named: "GreenSquare.png")!
-    var recipientAvatarImage:UIImage = UIImage(named: "GreenSquare.png")!
+    var senderAvatarImage:UIImage = UIImage(named: "david.jpg")!
+    var recipientAvatarImage:UIImage = UIImage(named: "david.jpg")!
     
     //var timer:NSTimer!
     var outgoingBubbleImageView = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.greenColor())
@@ -40,7 +40,7 @@ class OWCChatViewController: JSQMessagesViewController {
         loadMessages()
         
         //chat left bar item, change to desired back button
-        let exitChatButton = UIImageView(image: UIImage(named: "greenBackButton.png"))
+        let exitChatButton = UIImageView(image: UIImage(named: "david.jpg")!)
         exitChatButton.frame = CGRectMake(0, 0, 26, 26)
         exitChatButton.backgroundColor = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 1)
         
@@ -78,8 +78,9 @@ class OWCChatViewController: JSQMessagesViewController {
     //Update function if you intend to have user profile images
     func loadUserAvatarImage(){
         
-        self.senderAvatarImage = UIImage(named: "GreenSquare.png")!
-        self.recipientAvatarImage = UIImage(named: "GreenSquare.png")!
+        self.senderAvatarImage = UIImage(named: "david.jpg")!
+        self.recipientAvatarImage = UIImage(named: "david.jpg")!
+
         
     }
     

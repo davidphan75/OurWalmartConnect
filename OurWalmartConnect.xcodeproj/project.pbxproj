@@ -88,6 +88,10 @@
 		B1D2E1091C5C5037009A5A3B /* ParseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1081C5C5037009A5A3B /* ParseFunctions.swift */; };
 		B1D2E10B1C5C505A009A5A3B /* OWCAppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E10A1C5C505A009A5A3B /* OWCAppConstants.swift */; };
 		B1D2E10E1C5C608B009A5A3B /* OWCUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E10D1C5C608B009A5A3B /* OWCUtilities.swift */; };
+		B1D2E1131C5C6F18009A5A3B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1111C5C6F18009A5A3B /* MBProgressHUD.m */; };
+		B1D2E1151C5C6FFB009A5A3B /* OWCTableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1141C5C6FFB009A5A3B /* OWCTableViewDataManager.swift */; };
+		B1D2E1181C5C72E3009A5A3B /* OWCChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1161C5C72E3009A5A3B /* OWCChatTableViewCell.swift */; };
+		B1D2E1191C5C72E3009A5A3B /* OWCChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D2E1171C5C72E3009A5A3B /* OWCChatTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +246,12 @@
 		B1D2E1081C5C5037009A5A3B /* ParseFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseFunctions.swift; sourceTree = "<group>"; };
 		B1D2E10A1C5C505A009A5A3B /* OWCAppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCAppConstants.swift; sourceTree = "<group>"; };
 		B1D2E10D1C5C608B009A5A3B /* OWCUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCUtilities.swift; sourceTree = "<group>"; };
+		B1D2E10F1C5C6F18009A5A3B /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		B1D2E1101C5C6F18009A5A3B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B1D2E1111C5C6F18009A5A3B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B1D2E1141C5C6FFB009A5A3B /* OWCTableViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCTableViewDataManager.swift; sourceTree = "<group>"; };
+		B1D2E1161C5C72E3009A5A3B /* OWCChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCChatTableViewCell.swift; sourceTree = "<group>"; };
+		B1D2E1171C5C72E3009A5A3B /* OWCChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OWCChatTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,12 +412,14 @@
 		B1C262AC1C5C46A100A44BE3 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				B1C2634A1C5C494E00A44BE3 /* ChatFrameworks */,
 				B1D2E1081C5C5037009A5A3B /* ParseFunctions.swift */,
 				B1D2E1041C5C4F26009A5A3B /* OWCChatManager.swift */,
 				B1D2E1061C5C4F99009A5A3B /* OWCChatMessage.swift */,
 				B1C2634B1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift */,
 				B1C2634D1C5C4A9B00A44BE3 /* OWCChatViewController.swift */,
-				B1C2634A1C5C494E00A44BE3 /* ChatFrameworks */,
+				B1D2E1161C5C72E3009A5A3B /* OWCChatTableViewCell.swift */,
+				B1D2E1171C5C72E3009A5A3B /* OWCChatTableViewCell.xib */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -579,6 +591,7 @@
 			isa = PBXGroup;
 			children = (
 				B1D2E1031C5C4DD9009A5A3B /* OurWalmart-Bridging-Header.h */,
+				B1D2E1121C5C6F18009A5A3B /* MBProgressHUD */,
 			);
 			name = ObjectiveC;
 			sourceTree = "<group>";
@@ -596,8 +609,20 @@
 			isa = PBXGroup;
 			children = (
 				B1D2E10D1C5C608B009A5A3B /* OWCUtilities.swift */,
+				B1D2E1141C5C6FFB009A5A3B /* OWCTableViewDataManager.swift */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		B1D2E1121C5C6F18009A5A3B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B1D2E10F1C5C6F18009A5A3B /* MBProgressHUD-Prefix.pch */,
+				B1D2E1101C5C6F18009A5A3B /* MBProgressHUD.h */,
+				B1D2E1111C5C6F18009A5A3B /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = ../../Deckstr/Deckstr;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +738,7 @@
 				B175C5EB1C5C3857002CF263 /* LaunchScreen.storyboard in Resources */,
 				B1C2633D1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
 				B1C263121C5C46CE00A44BE3 /* JSQMessagesAssets.bundle in Resources */,
+				B1D2E1191C5C72E3009A5A3B /* OWCChatTableViewCell.xib in Resources */,
 				B175C5E81C5C3857002CF263 /* Assets.xcassets in Resources */,
 				B1C263381C5C46CE00A44BE3 /* JSQMessagesLoadEarlierHeaderView.xib in Resources */,
 				B1C263331C5C46CE00A44BE3 /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
@@ -761,6 +787,7 @@
 				B1C263321C5C46CE00A44BE3 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				B1C2632D1C5C46CE00A44BE3 /* JSQMessagesCellTextView.m in Sources */,
 				B1C262AB1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift in Sources */,
+				B1D2E1131C5C6F18009A5A3B /* MBProgressHUD.m in Sources */,
 				B1C263151C5C46CE00A44BE3 /* NSString+JSQMessages.m in Sources */,
 				B1C262A91C5C419A00A44BE3 /* OWCSignupViewController.swift in Sources */,
 				B1C2634E1C5C4A9B00A44BE3 /* OWCChatViewController.swift in Sources */,
@@ -788,6 +815,8 @@
 				B1C2634C1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift in Sources */,
 				B175C5E11C5C3857002CF263 /* AppDelegate.swift in Sources */,
 				B1C263231C5C46CE00A44BE3 /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
+				B1D2E1181C5C72E3009A5A3B /* OWCChatTableViewCell.swift in Sources */,
+				B1D2E1151C5C6FFB009A5A3B /* OWCTableViewDataManager.swift in Sources */,
 				B1D2E1051C5C4F26009A5A3B /* OWCChatManager.swift in Sources */,
 				B1C263141C5C46CE00A44BE3 /* NSBundle+JSQMessages.m in Sources */,
 				B1D2E1091C5C5037009A5A3B /* ParseFunctions.swift in Sources */,

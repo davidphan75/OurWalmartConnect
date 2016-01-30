@@ -64,6 +64,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    // Tab Bar Set Up
+    func setupTabBarGlobal() {
+        
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        UITabBar.appearance().barTintColor = UIColor.blueColor()
+        
+    }
+    
+    // Naigation Bar Set Up
+    func setupNavigationBarGlobal() {
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont(name: "Apple SD Gothic Neo", size: 18)!]
+        UINavigationBar.appearance().titleTextAttributes = titleDict as? [String : AnyObject]
+        UIBarButtonItem.appearance().setTitleTextAttributes(titleDict as? [String : AnyObject], forState: UIControlState.Normal)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().barTintColor = UIColor.blueColor()
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+    }
+    
     
     // Configure Push Notifications
     func configurePushNotifications(application: UIApplication) {

@@ -21,24 +21,44 @@ class OWCFirstLaunchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginButtonPressed(sender: AnyObject) {
-        let user = PFUser()
-        user.username = "test"
-        user.password = "1"
-        
-        user.signUpInBackgroundWithBlock({ (success, error) -> Void in
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
-            
-            if error == nil {
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "signedUp")
-                NSUserDefaults.standardUserDefaults().setValue(PFUser.currentUser()?.username, forKey: "username")
-              
-            } else {
 
+ 
+    @IBAction func SignUpButtonPressed(sender: AnyObject) {
+        PFUser.logInWithUsernameInBackground("test2", password: "1", block: { (user, error) -> Void in
+            
+            // REMOVE BEFORE RELEASE
+            if error != nil {
+                print("logged in")
+            } else {
+                print("error loggin in")
             }
+            
+            
         })
-        
-        
+
+        self.performSegueWithIdentifier("loggedIn", sender: nil)
+    }
+    
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+//        let user = PFUser()
+//        user.username = "test"
+//        user.password = "1"
+//        
+//        user.signUpInBackgroundWithBlock({ (success, error) -> Void in
+//            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+//            
+//            if error == nil {
+//                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "signedUp")
+//                NSUserDefaults.standardUserDefaults().setValue(PFUser.currentUser()?.username, forKey: "username")
+//              
+//            } else {
+//
+//            }
+//        })
+    
+    
+    
+    
     }
 
     /*

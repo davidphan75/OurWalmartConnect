@@ -12,7 +12,7 @@
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
-//#import "MBProgressHUD.h"
+#import "MBProgressHUD.h"
 //#import "UIImageView+WebCache.h"
 //#import <libxml/tree.h>
 //#import <libxml/parser.h>

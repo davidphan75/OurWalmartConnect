@@ -27,6 +27,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-Uy-bBm">
                                 <rect key="frame" x="327" y="285" width="48" height="30"/>
                                 <state key="normal" title="Signup"/>
+                                <connections>
+                                    <action selector="SignUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OP5-p1-Hrn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -37,12 +40,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="289"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bFh-EG-Njd">
             <objects>
                 <tabBarController id="Dxt-xT-IIJ" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="RN3-iQ-h1I">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="RN3-iQ-h1I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -60,7 +65,7 @@
             <objects>
                 <tableViewController id="gAq-7F-Z9i" customClass="OWCChatListTableViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="O1j-rM-3rR">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -79,21 +84,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="SNP-1S-zOH"/>
+                    <connections>
+                        <segue destination="3BP-RP-YJA" kind="show" identifier="startChat" id="ybB-iG-spu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="713-R1-hmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2934" y="290"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="fMo-IJ-QJj">
             <objects>
-                <viewController id="3BP-RP-YJA" sceneMemberID="viewController">
+                <viewController id="3BP-RP-YJA" customClass="OWCChatViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vDL-SX-XQc"/>
                         <viewControllerLayoutGuide type="bottom" id="tOJ-Gt-j6m"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CFg-fH-eFB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
