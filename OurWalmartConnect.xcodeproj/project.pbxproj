@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B103D60C1C5CC305006A68C5 /* OWCMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D60B1C5CC305006A68C5 /* OWCMainTableViewController.swift */; };
+		B103D6111C5CC4F6006A68C5 /* OWCMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D60F1C5CC4F6006A68C5 /* OWCMainTableViewCell.swift */; };
+		B103D6121C5CC4F6006A68C5 /* OWCMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B103D6101C5CC4F6006A68C5 /* OWCMainTableViewCell.xib */; };
+		B103D6151C5CCACF006A68C5 /* OWCMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D6141C5CCACF006A68C5 /* OWCMoreTableViewController.swift */; };
+		B103D6171C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D6161C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift */; };
+		B103D6191C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D6181C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift */; };
+		B103D61B1C5CDB3F006A68C5 /* OWCWalmartLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */; };
+		B103D61D1C5CDEA6006A68C5 /* OWCLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D61C1C5CDEA6006A68C5 /* OWCLocationManager.swift */; };
 		B175C5E11C5C3857002CF263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B175C5E01C5C3857002CF263 /* AppDelegate.swift */; };
 		B175C5E61C5C3857002CF263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B175C5E41C5C3857002CF263 /* Main.storyboard */; };
 		B175C5E81C5C3857002CF263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B175C5E71C5C3857002CF263 /* Assets.xcassets */; };
@@ -33,6 +41,8 @@
 		B175C6361C5C3E99002CF263 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6331C5C3E99002CF263 /* FBSDKCoreKit.framework */; };
 		B175C6371C5C3E99002CF263 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6341C5C3E99002CF263 /* FBSDKLoginKit.framework */; };
 		B175C6381C5C3E99002CF263 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6351C5C3E99002CF263 /* FBSDKShareKit.framework */; };
+		B17B3ADC1C5D64E000DC70D6 /* OWCSignupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B3ADB1C5D64E000DC70D6 /* OWCSignupHandler.swift */; };
+		B17B3ADE1C5D653300DC70D6 /* OWCParseLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B3ADD1C5D653300DC70D6 /* OWCParseLoginHandler.swift */; };
 		B1C262A71C5C418300A44BE3 /* OWCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C262A61C5C418300A44BE3 /* OWCLoginViewController.swift */; };
 		B1C262A91C5C419A00A44BE3 /* OWCSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C262A81C5C419A00A44BE3 /* OWCSignupViewController.swift */; };
 		B1C262AB1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C262AA1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift */; };
@@ -112,6 +122,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B103D60B1C5CC305006A68C5 /* OWCMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMainTableViewController.swift; sourceTree = "<group>"; };
+		B103D60F1C5CC4F6006A68C5 /* OWCMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMainTableViewCell.swift; sourceTree = "<group>"; };
+		B103D6101C5CC4F6006A68C5 /* OWCMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OWCMainTableViewCell.xib; sourceTree = "<group>"; };
+		B103D6141C5CCACF006A68C5 /* OWCMoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMoreTableViewController.swift; sourceTree = "<group>"; };
+		B103D6161C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSignUpUserOptionTableViewController.swift; sourceTree = "<group>"; };
+		B103D6181C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSelectStoreViewController.swift; sourceTree = "<group>"; };
+		B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCWalmartLocation.swift; sourceTree = "<group>"; };
+		B103D61C1C5CDEA6006A68C5 /* OWCLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCLocationManager.swift; sourceTree = "<group>"; };
 		B175C5DD1C5C3857002CF263 /* OurWalmartConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OurWalmartConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B175C5E01C5C3857002CF263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B175C5E51C5C3857002CF263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +162,8 @@
 		B175C6331C5C3E99002CF263 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B175C6341C5C3E99002CF263 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B175C6351C5C3E99002CF263 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		B17B3ADB1C5D64E000DC70D6 /* OWCSignupHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSignupHandler.swift; sourceTree = "<group>"; };
+		B17B3ADD1C5D653300DC70D6 /* OWCParseLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCParseLoginHandler.swift; sourceTree = "<group>"; };
 		B1C262A61C5C418300A44BE3 /* OWCLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCLoginViewController.swift; sourceTree = "<group>"; };
 		B1C262A81C5C419A00A44BE3 /* OWCSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSignupViewController.swift; sourceTree = "<group>"; };
 		B1C262AA1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCFirstLaunchViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +319,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B103D6091C5CC297006A68C5 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				B103D6131C5CCAAA006A68C5 /* More */,
+				B103D60A1C5CC29F006A68C5 /* Main */,
+				B1C262AC1C5C46A100A44BE3 /* Chat */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+		B103D60A1C5CC29F006A68C5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B103D60B1C5CC305006A68C5 /* OWCMainTableViewController.swift */,
+				B103D60E1C5CC48F006A68C5 /* MainCell */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		B103D60D1C5CC481006A68C5 /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				B1D2E1161C5C72E3009A5A3B /* OWCChatTableViewCell.swift */,
+				B1D2E1171C5C72E3009A5A3B /* OWCChatTableViewCell.xib */,
+			);
+			name = ChatCell;
+			sourceTree = "<group>";
+		};
+		B103D60E1C5CC48F006A68C5 /* MainCell */ = {
+			isa = PBXGroup;
+			children = (
+				B103D60F1C5CC4F6006A68C5 /* OWCMainTableViewCell.swift */,
+				B103D6101C5CC4F6006A68C5 /* OWCMainTableViewCell.xib */,
+			);
+			name = MainCell;
+			sourceTree = "<group>";
+		};
+		B103D6131C5CCAAA006A68C5 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				B103D6141C5CCACF006A68C5 /* OWCMoreTableViewController.swift */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
 		B175C5D41C5C3856002CF263 = {
 			isa = PBXGroup;
 			children = (
@@ -325,10 +390,9 @@
 				B1C262A41C5C414400A44BE3 /* Core */,
 				B1D2E10C1C5C605D009A5A3B /* Utility */,
 				B1C2633E1C5C46D900A44BE3 /* ObjectiveC */,
-				B1C262AC1C5C46A100A44BE3 /* Chat */,
+				B103D6091C5CC297006A68C5 /* Tabs */,
 				B1C262A51C5C415700A44BE3 /* LoginSignup */,
 				B175C6321C5C3D3E002CF263 /* Frameworks */,
-				B175C60F1C5C3B72002CF263 /* parseFramework */,
 				B175C5E71C5C3857002CF263 /* Assets.xcassets */,
 				B175C5EC1C5C3857002CF263 /* Info.plist */,
 			);
@@ -366,12 +430,14 @@
 				B175C6141C5C3B72002CF263 /* ParseTwitterUtils.framework */,
 				B175C6151C5C3B72002CF263 /* ParseUI.framework */,
 			);
-			path = parseFramework;
+			name = parseFramework;
+			path = OurWalmartConnect/parseFramework;
 			sourceTree = "<group>";
 		};
 		B175C6321C5C3D3E002CF263 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B175C60F1C5C3B72002CF263 /* parseFramework */,
 				B175C6301C5C3D07002CF263 /* libz.tbd */,
 				B175C62E1C5C3CFD002CF263 /* SystemConfiguration.framework */,
 				B175C62C1C5C3CF2002CF263 /* StoreKit.framework */,
@@ -395,6 +461,8 @@
 				B175C5E41C5C3857002CF263 /* Main.storyboard */,
 				B175C5E01C5C3857002CF263 /* AppDelegate.swift */,
 				B1D2E10A1C5C505A009A5A3B /* OWCAppConstants.swift */,
+				B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */,
+				B103D61C1C5CDEA6006A68C5 /* OWCLocationManager.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -405,6 +473,10 @@
 				B1C262A61C5C418300A44BE3 /* OWCLoginViewController.swift */,
 				B1C262A81C5C419A00A44BE3 /* OWCSignupViewController.swift */,
 				B1C262AA1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift */,
+				B103D6161C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift */,
+				B103D6181C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift */,
+				B17B3ADB1C5D64E000DC70D6 /* OWCSignupHandler.swift */,
+				B17B3ADD1C5D653300DC70D6 /* OWCParseLoginHandler.swift */,
 			);
 			name = LoginSignup;
 			sourceTree = "<group>";
@@ -418,8 +490,7 @@
 				B1D2E1061C5C4F99009A5A3B /* OWCChatMessage.swift */,
 				B1C2634B1C5C4A0800A44BE3 /* OWCChatListTableViewController.swift */,
 				B1C2634D1C5C4A9B00A44BE3 /* OWCChatViewController.swift */,
-				B1D2E1161C5C72E3009A5A3B /* OWCChatTableViewCell.swift */,
-				B1D2E1171C5C72E3009A5A3B /* OWCChatTableViewCell.xib */,
+				B103D60D1C5CC481006A68C5 /* ChatCell */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -737,6 +808,7 @@
 			files = (
 				B175C5EB1C5C3857002CF263 /* LaunchScreen.storyboard in Resources */,
 				B1C2633D1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
+				B103D6121C5CC4F6006A68C5 /* OWCMainTableViewCell.xib in Resources */,
 				B1C263121C5C46CE00A44BE3 /* JSQMessagesAssets.bundle in Resources */,
 				B1D2E1191C5C72E3009A5A3B /* OWCChatTableViewCell.xib in Resources */,
 				B175C5E81C5C3857002CF263 /* Assets.xcassets in Resources */,
@@ -771,9 +843,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1C2631F1C5C46CE00A44BE3 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
+				B103D60C1C5CC305006A68C5 /* OWCMainTableViewController.swift in Sources */,
 				B1C2633C1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
 				B1C263271C5C46CE00A44BE3 /* JSQMediaItem.m in Sources */,
 				B1C263281C5C46CE00A44BE3 /* JSQMessage.m in Sources */,
+				B103D6171C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift in Sources */,
 				B1C2632E1C5C46CE00A44BE3 /* JSQMessagesCollectionView.m in Sources */,
 				B1C263241C5C46CE00A44BE3 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				B1C263111C5C46CE00A44BE3 /* JSQSystemSoundPlayer.m in Sources */,
@@ -783,6 +857,7 @@
 				B1C2632C1C5C46CE00A44BE3 /* JSQVideoMediaItem.m in Sources */,
 				B1C263361C5C46CE00A44BE3 /* JSQMessagesLabel.m in Sources */,
 				B1C263221C5C46CE00A44BE3 /* JSQMessagesBubblesSizeCalculator.m in Sources */,
+				B103D6191C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift in Sources */,
 				B1C2631B1C5C46CE00A44BE3 /* JSQMessagesViewController.m in Sources */,
 				B1C263321C5C46CE00A44BE3 /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				B1C2632D1C5C46CE00A44BE3 /* JSQMessagesCellTextView.m in Sources */,
@@ -791,6 +866,7 @@
 				B1C263151C5C46CE00A44BE3 /* NSString+JSQMessages.m in Sources */,
 				B1C262A91C5C419A00A44BE3 /* OWCSignupViewController.swift in Sources */,
 				B1C2634E1C5C4A9B00A44BE3 /* OWCChatViewController.swift in Sources */,
+				B103D61D1C5CDEA6006A68C5 /* OWCLocationManager.swift in Sources */,
 				B1C263211C5C46CE00A44BE3 /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				B1C2632A1C5C46CE00A44BE3 /* JSQMessagesBubbleImage.m in Sources */,
 				B1C263351C5C46CE00A44BE3 /* JSQMessagesInputToolbar.m in Sources */,
@@ -799,12 +875,14 @@
 				B1C263251C5C46CE00A44BE3 /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */,
 				B1C263201C5C46CE00A44BE3 /* JSQMessagesTimestampFormatter.m in Sources */,
 				B1C2631E1C5C46CE00A44BE3 /* JSQMessagesBubbleImageFactory.m in Sources */,
+				B103D6111C5CC4F6006A68C5 /* OWCMainTableViewCell.swift in Sources */,
 				B1C263391C5C46CE00A44BE3 /* JSQMessagesMediaPlaceholderView.m in Sources */,
 				B1C263371C5C46CE00A44BE3 /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
 				B1D2E1071C5C4F99009A5A3B /* OWCChatMessage.swift in Sources */,
 				B1C263191C5C46CE00A44BE3 /* UIView+JSQMessages.m in Sources */,
 				B1D2E10E1C5C608B009A5A3B /* OWCUtilities.swift in Sources */,
 				B1C263261C5C46CE00A44BE3 /* JSQLocationMediaItem.m in Sources */,
+				B103D61B1C5CDB3F006A68C5 /* OWCWalmartLocation.swift in Sources */,
 				B1C263161C5C46CE00A44BE3 /* UIColor+JSQMessages.m in Sources */,
 				B1C263131C5C46CE00A44BE3 /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				B1C2631A1C5C46CE00A44BE3 /* JSQMessagesKeyboardController.m in Sources */,
@@ -818,9 +896,12 @@
 				B1D2E1181C5C72E3009A5A3B /* OWCChatTableViewCell.swift in Sources */,
 				B1D2E1151C5C6FFB009A5A3B /* OWCTableViewDataManager.swift in Sources */,
 				B1D2E1051C5C4F26009A5A3B /* OWCChatManager.swift in Sources */,
+				B17B3ADE1C5D653300DC70D6 /* OWCParseLoginHandler.swift in Sources */,
+				B103D6151C5CCACF006A68C5 /* OWCMoreTableViewController.swift in Sources */,
 				B1C263141C5C46CE00A44BE3 /* NSBundle+JSQMessages.m in Sources */,
 				B1D2E1091C5C5037009A5A3B /* ParseFunctions.swift in Sources */,
 				B1C263291C5C46CE00A44BE3 /* JSQMessagesAvatarImage.m in Sources */,
+				B17B3ADC1C5D64E000DC70D6 /* OWCSignupHandler.swift in Sources */,
 				B1C263181C5C46CE00A44BE3 /* UIImage+JSQMessages.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

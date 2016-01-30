@@ -32,20 +32,7 @@ class OWCFirstLaunchViewController: UIViewController {
 
  
     @IBAction func SignUpButtonPressed(sender: AnyObject) {
-        
-        PFUser.logInWithUsernameInBackground("test2", password: "1", block: { (user, error) -> Void in
-            
-            // REMOVE BEFORE RELEASE
-            if error != nil {
-                print("logged in")
-            } else {
-                print("error loggin in")
-            }
-            
-            
-        })
-
-        self.performSegueWithIdentifier("loggedIn", sender: nil)
+        self.performSegueWithIdentifier("toSignUp", sender: self)
     }
     
     func loadGeoLocations(skipNumber:Int){

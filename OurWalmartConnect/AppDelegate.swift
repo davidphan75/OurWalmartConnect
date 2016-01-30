@@ -57,6 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Facebook
         FBSDKAppEvents.activateApp()
+        
+        //Location Manager, Request to use location
+        OWCLocationManager.sharedInstance.startUpdatingLocation()
 
     }
 
