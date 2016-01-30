@@ -8,16 +8,22 @@
 
 import UIKit
 
-class OWCSignUpUserOptionTableViewController: UITableViewController {
+class OWCSignUpUserOptionTableViewController: UITableViewController,UITextFieldDelegate {
+    
+    var previousIndexPath:NSIndexPath?
 
+    @IBOutlet weak var advisorCodeTextField: UITextField!
+    var numberOfRows:Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //TableView SetuUp
+        tableView.separatorColor = UIColor.whiteColor()
+        self.advisorCodeTextField.delegate = self
+        
+        //Varible setup
+        self.numberOfRows = 2
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,9 +40,38 @@ class OWCSignUpUserOptionTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return self.numberOfRows!
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(self.previousIndexPath == nil){
+            self.previousIndexPath = self.tableView.indexPathsForVisibleRows?.first
+
+        }
+        if indexPath.row == 0{
+            (self.parentViewController as! OWCSignupViewController).isAdvisor = false
+            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+            self.tableView.cellForRowAtIndexPath(previousIndexPath!)?.accessoryType = .None
+            self.previousIndexPath = indexPath
+            self.numberOfRows = 2
+        }else{
+            (self.parentViewController as! OWCSignupViewController).isAdvisor = true
+            self.tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+            self.tableView.cellForRowAtIndexPath(previousIndexPath!)?.accessoryType = .None
+            self.previousIndexPath = indexPath
+            self.numberOfRows = 3
+
+        }
+        self.tableView.reloadData()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+         (self.parentViewController as! OWCSignupViewController).advisorCode = self.advisorCodeTextField.text
+        textField.resignFirstResponder()
+        return true
+    }
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)

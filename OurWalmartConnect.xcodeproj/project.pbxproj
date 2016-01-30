@@ -102,6 +102,7 @@
 		B1D2E1151C5C6FFB009A5A3B /* OWCTableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1141C5C6FFB009A5A3B /* OWCTableViewDataManager.swift */; };
 		B1D2E1181C5C72E3009A5A3B /* OWCChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E1161C5C72E3009A5A3B /* OWCChatTableViewCell.swift */; };
 		B1D2E1191C5C72E3009A5A3B /* OWCChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D2E1171C5C72E3009A5A3B /* OWCChatTableViewCell.xib */; };
+		B1D7021E1C5D7A1100FA0D2C /* OWCFourmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -272,6 +273,7 @@
 		B1D2E1141C5C6FFB009A5A3B /* OWCTableViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCTableViewDataManager.swift; sourceTree = "<group>"; };
 		B1D2E1161C5C72E3009A5A3B /* OWCChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCChatTableViewCell.swift; sourceTree = "<group>"; };
 		B1D2E1171C5C72E3009A5A3B /* OWCChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OWCChatTableViewCell.xib; sourceTree = "<group>"; };
+		B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCFourmHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				B103D60B1C5CC305006A68C5 /* OWCMainTableViewController.swift */,
+				B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */,
 				B103D60E1C5CC48F006A68C5 /* MainCell */,
 			);
 			name = Main;
@@ -388,7 +391,6 @@
 			isa = PBXGroup;
 			children = (
 				B1C262A41C5C414400A44BE3 /* Core */,
-				B1D2E10C1C5C605D009A5A3B /* Utility */,
 				B1C2633E1C5C46D900A44BE3 /* ObjectiveC */,
 				B103D6091C5CC297006A68C5 /* Tabs */,
 				B1C262A51C5C415700A44BE3 /* LoginSignup */,
@@ -457,6 +459,7 @@
 		B1C262A41C5C414400A44BE3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B1D2E10C1C5C605D009A5A3B /* Utility */,
 				B175C5E91C5C3857002CF263 /* LaunchScreen.storyboard */,
 				B175C5E41C5C3857002CF263 /* Main.storyboard */,
 				B175C5E01C5C3857002CF263 /* AppDelegate.swift */,
@@ -868,6 +871,7 @@
 				B1C2634E1C5C4A9B00A44BE3 /* OWCChatViewController.swift in Sources */,
 				B103D61D1C5CDEA6006A68C5 /* OWCLocationManager.swift in Sources */,
 				B1C263211C5C46CE00A44BE3 /* JSQMessagesToolbarButtonFactory.m in Sources */,
+				B1D7021E1C5D7A1100FA0D2C /* OWCFourmHandler.swift in Sources */,
 				B1C2632A1C5C46CE00A44BE3 /* JSQMessagesBubbleImage.m in Sources */,
 				B1C263351C5C46CE00A44BE3 /* JSQMessagesInputToolbar.m in Sources */,
 				B1C263171C5C46CE00A44BE3 /* UIDevice+JSQMessages.m in Sources */,

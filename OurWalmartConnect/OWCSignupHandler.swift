@@ -9,11 +9,12 @@
 import Foundation
 
 enum OWCSignUpError {
-    case usernameInvalid
+    case storeLocation
     case passwordInvalid
     case passwordNotMatching
     case emailInvalid
     case errorInSignUp
+    case advisorCode
 }
 
 //Swift func that check the validity of an email
@@ -26,40 +27,54 @@ func isValidEmail(testStr:String) -> Bool {
 }
 
 class OWCSignUpHandler {
-    class func signUp(username username: String, password: String, confirmPassword: String, email: String, completion: (success: Bool, error: OWCSignUpError?) -> Void) {
+    class func signUp(storeLocation storeLocation: PFObject, password: String, email: String,advisorCode:String,isAdvisor:Bool,name:String,  completion: (success: Bool, error: OWCSignUpError?) -> Void) {
         let debugMode = true
         
-        if username.isEmpty || username.characters.count < 5 {
-            completion(success: false, error: .usernameInvalid)
-        }
-        else if email.isEmpty || isValidEmail(email) != true {
-            completion(success: false, error: .emailInvalid)
-        }
-        else if password.isEmpty || password.characters.count < 8 {
-            completion(success: false, error: .passwordInvalid)
-        }
-        else if confirmPassword.isEmpty || confirmPassword != password {
-            completion(success: false, error: .passwordNotMatching)
-        }
-        else {
-            let newUser = PFUser()
-            newUser.username = username
-            newUser.password = password
-            newUser.email = email
-            
-            newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-                
-                print("here")
-                // REMOVE BEFORE RELEASE
-                if debugMode && error == nil {
-                    completion(success: true, error: nil)
-                } else if error != nil {
-                    print("\(error)")
-                    completion(success: false, error: .errorInSignUp)
+        let query = PFQuery(className: "AdvisorCode")
+        query.whereKey("code", equalTo: advisorCode)
+        query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if (error == nil){
+                if objects!.count == 0 && isAdvisor{
+                    completion(success: false, error: .advisorCode)
+                }else{
                     
+                    
+//                    if (let _test:PFObject = storeLocation) {
+//                        completion(success: false, error: .storeLocation)
+//                    }
+                    if email.isEmpty || isValidEmail(email) != true {
+                        completion(success: false, error: .emailInvalid)
+                    }
+                    else if password.isEmpty || password.characters.count < 8 {
+                        completion(success: false, error: .passwordInvalid)
+                    }
+                    else {
+                        let newUser = PFUser()
+                        newUser.username = email
+                        newUser.password = password
+                        newUser.email = email
+                        newUser.setObject(storeLocation, forKey: "associatedStore")
+                        newUser.setObject(name, forKey: "name")
+                        
+                        objects!.first!.deleteInBackground()
+                        newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
+                            
+                            print("here")
+                            // REMOVE BEFORE RELEASE
+                            if debugMode && error == nil {
+                                completion(success: true, error: nil)
+                            } else if error != nil {
+                                print("\(error)")
+                                completion(success: false, error: .errorInSignUp)
+                                
+                            }
+                            }
+                        )}
+
                 }
-                }
-            )}
-    }
+            }
+        }
+        
+}
     
 }

@@ -14,7 +14,7 @@ class OWCChatViewController: JSQMessagesViewController {
 
     var messages = [OWCChatMessage]()
     var users = [PFUser]()
-
+    
     var aChatManager:OWCChatManager?
     
     //defualt profile image
@@ -155,6 +155,8 @@ class OWCChatViewController: JSQMessagesViewController {
         object["ChatText"] = text
         object.saveInBackground()
         self.aChatManager!.lastMessageLoaded = object
+        self.aChatManager!.lastMessageLoaded?.saveInBackground()
+        
         self.finishSendingMessage()
     }
     
