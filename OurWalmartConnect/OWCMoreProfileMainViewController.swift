@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import ParseUI
 
 class OWCMoreProfileMainViewController: UIViewController {
 
+
+    @IBOutlet weak var profileImageView: PFImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    var user:PFUser?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
+        if user == nil{
+            user = PFUser.currentUser()
+        }
+        self.nameLabel.text = user!.objectForKey("Name") as? String
+        
+        if user?.objectForKey("profileImage") != nil{
+            self.profileImageView.file = user?.objectForKey("profileImage") as? PFFile
+            self.profileImageView.loadInBackground()
+        }else{
+            self.profileImageView.image = UIImage(named: "david.jpg")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
