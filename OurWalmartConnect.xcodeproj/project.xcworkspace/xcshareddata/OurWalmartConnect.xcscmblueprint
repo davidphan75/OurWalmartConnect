@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B3627C81C6EDFCDE0BB76D485249F0C1AB735D93",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A443AEEE2266622375645568CE56CA520D733BF3" : 0,
+    "B3627C81C6EDFCDE0BB76D485249F0C1AB735D93" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4FB92521-C77F-4213-B85F-751BB861D23D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A443AEEE2266622375645568CE56CA520D733BF3" : "Deckstr\/",
+    "B3627C81C6EDFCDE0BB76D485249F0C1AB735D93" : "OurWalmartConnect\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OurWalmartConnect",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OurWalmartConnect.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/davidphan75\/Deckster.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A443AEEE2266622375645568CE56CA520D733BF3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/davidphan75\/OurWalmartConnect.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B3627C81C6EDFCDE0BB76D485249F0C1AB735D93"
+    }
+  ]
+}
