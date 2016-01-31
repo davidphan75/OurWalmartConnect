@@ -81,8 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Tab Bar Set Up
     func setupTabBarGlobal() {
         
-        UITabBar.appearance().tintColor = UIColor.whiteColor()
-        //UITabBar.appearance().barTintColor = UIColor.blueColor()
+        UITabBar.appearance().tintColor = OWCGreen
+        //UITabBar.appearance().barTintColor = OWCGreen
         
     }
     

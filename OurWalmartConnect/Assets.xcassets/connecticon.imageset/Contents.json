@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "connecticon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "connecticon.png",
       "scale" : "2x"
     },
     {
