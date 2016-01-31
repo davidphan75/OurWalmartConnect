@@ -534,8 +534,8 @@
 				B1C262AE1C5C46CE00A44BE3 /* JSQSystemSoundPlayer.m */,
 			);
 			name = JSQSystemSoundPlayer;
-			path = "../../../../Desktop/Arkitu Version 2 DONE UPLOAD IOS/Aurkityou/Aurkityou/JSQMessagesViewController/JSQSystemSoundPlayer";
-			sourceTree = "<group>";
+			path = "../../../Desktop/Arkitu Version 2 DONE UPLOAD IOS/Aurkityou/Aurkityou/JSQMessagesViewController/JSQSystemSoundPlayer";
+			sourceTree = SOURCE_ROOT;
 		};
 		B1C262B11C5C46CE00A44BE3 /* Assets */ = {
 			isa = PBXGroup;
@@ -687,8 +687,8 @@
 				B1C2630F1C5C46CE00A44BE3 /* Views */,
 			);
 			name = JSQMessagesViewController;
-			path = "../../../../Desktop/Arkitu Version 2 DONE UPLOAD IOS/Aurkityou/Aurkityou/JSQMessagesViewController";
-			sourceTree = "<group>";
+			path = "../../../Desktop/Arkitu Version 2 DONE UPLOAD IOS/Aurkityou/Aurkityou/JSQMessagesViewController";
+			sourceTree = SOURCE_ROOT;
 		};
 		B1C2633E1C5C46D900A44BE3 /* ObjectiveC */ = {
 			isa = PBXGroup;
