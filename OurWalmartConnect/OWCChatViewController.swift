@@ -22,7 +22,7 @@ class OWCChatViewController: JSQMessagesViewController {
     var recipientAvatarImage:UIImage = UIImage(named: "david.jpg")!
     
     //var timer:NSTimer!
-    var outgoingBubbleImageView = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(UIColor.greenColor())
+    var outgoingBubbleImageView = JSQMessagesBubbleImageFactory().outgoingMessagesBubbleImageWithColor(OWCGreen)
     var incomingBubbleImageView = JSQMessagesBubbleImageFactory().incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
     
     
@@ -40,15 +40,15 @@ class OWCChatViewController: JSQMessagesViewController {
         loadMessages()
         
         //chat left bar item, change to desired back button
-        let exitChatButton = UIImageView(image: UIImage(named: "david.jpg")!)
-        exitChatButton.frame = CGRectMake(0, 0, 26, 26)
-        exitChatButton.backgroundColor = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 1)
+//        let exitChatButton = UIImageView(image: UIImage(named: "david.jpg")!)
+//        exitChatButton.frame = CGRectMake(0, 0, 26, 26)
+//        exitChatButton.backgroundColor = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 1)
         
         //        let subviews = self.inputToolbar!.contentView?.leftBarButtonContainerView?.subviews
         //        for subview in subviews!{
         //            subview.layer.opacity = 0
         //        }
-        self.inputToolbar!.contentView?.leftBarButtonContainerView?.addSubview(exitChatButton)
+        //self.inputToolbar!.contentView?.leftBarButtonContainerView?.addSubview(exitChatButton)
         //self.inputToolbar?.contentView?.leftBarButtonItem?.imageView?.image = UIImage(named: "greenBackButton.png")
         
         registerPFUserForPushNotifications(PFUser.currentUser()!)
@@ -78,8 +78,26 @@ class OWCChatViewController: JSQMessagesViewController {
     //Update function if you intend to have user profile images
     func loadUserAvatarImage(){
         
-        self.senderAvatarImage = UIImage(named: "david.jpg")!
-        self.recipientAvatarImage = UIImage(named: "david.jpg")!
+        let file = aChatManager?.userChattingWith?.objectForKey("profileImage") as? PFFile
+        file?.getDataInBackgroundWithBlock({ (imageData:NSData?, error: NSError?) -> Void in
+            if error == nil || imageData != nil {
+                self.recipientAvatarImage = UIImage(data:imageData!)!
+            }
+        })
+        
+        
+        let file2 = PFUser.currentUser()!.objectForKey("profileImage") as? PFFile
+        file2?.getDataInBackgroundWithBlock({ (imageData:NSData?, error: NSError?) -> Void in
+            if error == nil || imageData != nil {
+                self.recipientAvatarImage = UIImage(data:imageData!)!
+            }
+        })
+
+//
+//        self.senderAvatarImage = UIImage(named: "david.jpg")!
+//        
+//        
+//        self.recipientAvatarImage = UIImage(named: "david.jpg")!
 
         
     }

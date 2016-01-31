@@ -54,7 +54,9 @@ class OWCChatListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! OWCChatTableViewCell
 
         // Configure the cell...
-        cell.nameLabel.text = (self.chatDataManager?.tableViewObjects[indexPath.row] as! PFUser).username
+//        cell.nameLabel.text = (self.chatDataManager?.tableViewObjects[indexPath.row] as! PFUser).username
+        
+        cell.setUpCell(self.chatDataManager?.tableViewObjects[indexPath.row] as! PFUser)
 
         return cell
     }
@@ -66,7 +68,7 @@ class OWCChatListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 60
+        return 70
     }
 
     /*

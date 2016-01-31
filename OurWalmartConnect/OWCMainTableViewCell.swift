@@ -48,6 +48,13 @@ class OWCMainTableViewCell: UITableViewCell {
         //time?
         //self.timeLabel.text = fourmTopic.objectForKey("createdAt") as! String
         
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEE, MMM d, h:mm a"
+        self.timeLabel.text = dateFormatter.stringFromDate(NSDate())
+        
+
+        
+
         
        
        

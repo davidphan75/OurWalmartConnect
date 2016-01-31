@@ -29,14 +29,23 @@ class OWCChatTableViewCell: UITableViewCell {
     }
     
     func setUpCell(chatObject:PFObject){
-        self.messageLabel.text = chatObject.objectForKey("lastMessage") as? String
-        let users:[String] = (chatObject.objectForKey("users") as! [String])
-        if users[0] == (PFUser.currentUser()?.objectForKey("Name") as! String){
-            self.nameLabel.text = users[1]
-        }else{
-            self.nameLabel.text = users[0]
-
-        }
+        
+        
+        self.profileImageView.file = chatObject.objectForKey("profileImage") as? PFFile
+        self.profileImageView.layer.cornerRadius = self.profileImageView.layer.frame.height/2
+        self.profileImageView.clipsToBounds = true
+        self.profileImageView.loadInBackground()
+        self.nameLabel.text = chatObject.objectForKey("Name") as? String
+//        self.messageLabel.text = chatObject.objectForKey("lastMessage") as? String
+//        let users:[String] = (chatObject.objectForKey("users") as! [String])
+//        if users[0] == (PFUser.currentUser()?.objectForKey("Name") as! String){
+//            self.nameLabel.text = users[1]
+//        }else{
+//            self.nameLabel.text = users[0]
+//
+//        }
     }
+    
+    
     
 }
