@@ -8,10 +8,11 @@
 
 import UIKit
 
-class OWCMainTableViewController: UITableViewController {
+class OWCMainTableViewController: UITableViewController,UISearchBarDelegate {
 
     var MainViewDataManager:OWCTableViewDataManager?
 
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +98,15 @@ class OWCMainTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func tappedScreen(sender: AnyObject) {
+        self.searchBar.resignFirstResponder()
+    }
+    
+    
+    @IBAction func postButtonPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("postFourm", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
