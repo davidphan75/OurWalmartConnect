@@ -19,11 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u08-yq-IRF">
-                                <rect key="frame" x="178" y="377" width="340" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u08-yq-IRF">
+                                <rect key="frame" x="130" y="427" width="340" height="44"/>
                                 <color key="backgroundColor" red="0.63529411759999999" green="0.87450980389999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="h0d-eC-lj6"/>
+                                    <constraint firstAttribute="height" constant="44" id="Mxc-4c-64J"/>
+                                    <constraint firstAttribute="width" constant="340" id="peT-Um-WY8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,18 +33,11 @@
                                     <segue destination="Il3-Lj-44p" kind="presentation" identifier="toLogin" id="Ine-0L-omi"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intro Logo" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-nI-bNj">
-                                <rect key="frame" x="194" y="93" width="212" height="227"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nxt-nI-bNj" secondAttribute="height" multiplier="212:227" id="Kbh-pw-du0"/>
-                                    <constraint firstAttribute="width" constant="212" id="QLH-eW-UWD"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-Uy-bBm">
-                                <rect key="frame" x="178" y="428" width="193" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-Uy-bBm">
+                                <rect key="frame" x="130" y="483" width="340" height="44"/>
                                 <color key="backgroundColor" red="0.63529411759999999" green="0.87450980389999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="XOg-n6-eec"/>
+                                    <constraint firstAttribute="height" constant="44" id="Gdj-sf-ycD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,16 +46,23 @@
                                     <segue destination="9fa-Wb-3LS" kind="presentation" identifier="toSignUp" id="h7V-Nf-If5"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Intro Logo" translatesAutoresizingMaskIntoConstraints="NO" id="nxt-nI-bNj">
+                                <rect key="frame" x="194" y="93" width="212" height="227"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="T5O-3S-qfm"/>
+                                    <constraint firstAttribute="width" constant="212" id="jkA-vU-N1c"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nxt-nI-bNj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="IKD-XQ-LF0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tps-Uy-bBm" secondAttribute="bottom" constant="140" id="RVs-hb-4B8"/>
-                            <constraint firstItem="u08-yq-IRF" firstAttribute="top" secondItem="nxt-nI-bNj" secondAttribute="bottom" constant="57" id="brP-sA-gH2"/>
-                            <constraint firstItem="nxt-nI-bNj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gt2-yN-UV3"/>
-                            <constraint firstItem="u08-yq-IRF" firstAttribute="centerX" secondItem="Tps-Uy-bBm" secondAttribute="centerX" id="iQZ-Mc-yKX"/>
-                            <constraint firstItem="Tps-Uy-bBm" firstAttribute="top" secondItem="u08-yq-IRF" secondAttribute="bottom" constant="23" id="jho-Tc-zQI"/>
-                            <constraint firstItem="nxt-nI-bNj" firstAttribute="centerX" secondItem="u08-yq-IRF" secondAttribute="centerX" id="wPb-xc-k9A"/>
+                            <constraint firstItem="Tps-Uy-bBm" firstAttribute="top" secondItem="u08-yq-IRF" secondAttribute="bottom" constant="12" id="9CV-Ag-PxH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tps-Uy-bBm" secondAttribute="bottom" constant="73" id="Fyp-Bx-BqU"/>
+                            <constraint firstItem="u08-yq-IRF" firstAttribute="centerX" secondItem="nxt-nI-bNj" secondAttribute="centerX" id="dwT-5Z-1BO"/>
+                            <constraint firstItem="u08-yq-IRF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPt-4k-UB0"/>
+                            <constraint firstItem="nxt-nI-bNj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="tG8-Bk-snU"/>
+                            <constraint firstItem="Tps-Uy-bBm" firstAttribute="trailing" secondItem="u08-yq-IRF" secondAttribute="trailing" id="yBv-Mx-IrN"/>
+                            <constraint firstItem="Tps-Uy-bBm" firstAttribute="leading" secondItem="u08-yq-IRF" secondAttribute="leading" id="yNs-KT-jOb"/>
                         </constraints>
                     </view>
                 </viewController>
