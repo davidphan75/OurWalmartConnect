@@ -322,6 +322,43 @@
             </objects>
             <point key="canvasLocation" x="2921" y="1006"/>
         </scene>
+        <!--Post Fourm Page1 View Controller-->
+        <scene sceneID="VWy-Y4-UFT">
+            <objects>
+                <viewController id="Kk5-fj-gqy" customClass="OWCPostFourmPage1ViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M9B-E8-1DI"/>
+                        <viewControllerLayoutGuide type="bottom" id="02v-Hr-dq2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dih-QW-0hh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2zQ-wA-skO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyx-K6-jvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3741" y="-1100"/>
+        </scene>
+        <!--Post Fourm Page2 View Controller-->
+        <scene sceneID="3Zn-eS-gKq">
+            <objects>
+                <viewController id="Myx-FB-Aqa" customClass="OWCPostFourmPage2ViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qvj-0C-Nf1"/>
+                        <viewControllerLayoutGuide type="bottom" id="hQa-Od-9nW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vlk-5z-Nmz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1r-Le-aH9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4426" y="-1100"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="3MZ-eJ-R42">
             <objects>
@@ -350,7 +387,9 @@
                             <outlet property="delegate" destination="6TI-wL-zbY" id="aDL-fJ-1Zt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="mES-3K-ILH"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="mES-3K-ILH">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="0nJ-vW-Uo1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="YCe-D6-lmP" id="frL-iM-Kk2"/>
                     </connections>
@@ -1304,6 +1343,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGA-Pz-S3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-19" y="1042"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A48-rl-cHi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="akJ-02-6ea" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9FU-Py-F2L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kk5-fj-gqy" kind="relationship" relationship="rootViewController" id="YKh-XW-hrV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8I3-ZI-8Ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2929" y="-1100"/>
         </scene>
     </scenes>
     <resources>

@@ -15,6 +15,8 @@
 		B103D61B1C5CDB3F006A68C5 /* OWCWalmartLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */; };
 		B103D61D1C5CDEA6006A68C5 /* OWCLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D61C1C5CDEA6006A68C5 /* OWCLocationManager.swift */; };
 		B12CF3271C5E2AAC00952E2E /* OWCMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF3261C5E2AAC00952E2E /* OWCMainTabBarController.swift */; };
+		B12CF32A1C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF3291C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift */; };
+		B12CF32C1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF32B1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift */; };
 		B132AD7C1C5E128C00D458FA /* OWCMoreMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B132AD7B1C5E128C00D458FA /* OWCMoreMainTableViewController.swift */; };
 		B160D97E1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160D97D1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift */; };
 		B160D9811C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160D97F1C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift */; };
@@ -141,6 +143,8 @@
 		B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCWalmartLocation.swift; sourceTree = "<group>"; };
 		B103D61C1C5CDEA6006A68C5 /* OWCLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCLocationManager.swift; sourceTree = "<group>"; };
 		B12CF3261C5E2AAC00952E2E /* OWCMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMainTabBarController.swift; sourceTree = "<group>"; };
+		B12CF3291C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCPostFourmPage1ViewController.swift; sourceTree = "<group>"; };
+		B12CF32B1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCPostFourmPage2ViewController.swift; sourceTree = "<group>"; };
 		B132AD7B1C5E128C00D458FA /* OWCMoreMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMoreMainTableViewController.swift; sourceTree = "<group>"; };
 		B160D97D1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectTableViewDataManager.swift; sourceTree = "<group>"; };
 		B160D97F1C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectWalmartTableViewCell.swift; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 		B103D60A1C5CC29F006A68C5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B12CF3281C5E3B5900952E2E /* Post */,
 				B103D60B1C5CC305006A68C5 /* OWCMainTableViewController.swift */,
 				B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */,
 				B103D60E1C5CC48F006A68C5 /* MainCell */,
@@ -389,6 +394,15 @@
 				B132AD7B1C5E128C00D458FA /* OWCMoreMainTableViewController.swift */,
 			);
 			name = More;
+			sourceTree = "<group>";
+		};
+		B12CF3281C5E3B5900952E2E /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				B12CF3291C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift */,
+				B12CF32B1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift */,
+			);
+			name = Post;
 			sourceTree = "<group>";
 		};
 		B160D9831C5DC52500824249 /* ConnectCells */ = {
@@ -887,6 +901,7 @@
 				B1D2E10B1C5C505A009A5A3B /* OWCAppConstants.swift in Sources */,
 				B103D6191C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift in Sources */,
 				B12CF3271C5E2AAC00952E2E /* OWCMainTabBarController.swift in Sources */,
+				B12CF32A1C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift in Sources */,
 				B17355F21C5E02420063A020 /* JSQMessagesAvatarImage.m in Sources */,
 				B1C262AB1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift in Sources */,
 				B17355F01C5E02420063A020 /* JSQMediaItem.m in Sources */,
@@ -903,6 +918,7 @@
 				B1D2E1071C5C4F99009A5A3B /* OWCChatMessage.swift in Sources */,
 				B17355E71C5E02420063A020 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				B17355E01C5E02420063A020 /* UIImage+JSQMessages.m in Sources */,
+				B12CF32C1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift in Sources */,
 				B17355EC1C5E02420063A020 /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				B17355FE1C5E02420063A020 /* JSQMessagesInputToolbar.m in Sources */,
 				B17355DD1C5E02420063A020 /* NSString+JSQMessages.m in Sources */,

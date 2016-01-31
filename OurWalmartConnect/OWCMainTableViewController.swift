@@ -23,12 +23,12 @@ class OWCMainTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         //Set Up Data Manager
-        let query = PFUser.query()
-        self.MainViewDataManager = OWCTableViewDataManager(currentViewController: self, query: query!)
+        let query = PFQuery(className: "fourmTopic")
+        self.MainViewDataManager = OWCTableViewDataManager(currentViewController: self, query: query)
         
         //TableView SetuUp
         tableView.separatorColor = UIColor.whiteColor()
-        tableView.registerNib(UINib(nibName: "OWCChatTableViewCell", bundle: nil), forCellReuseIdentifier: "chatCell")
+        tableView.registerNib(UINib(nibName: "OWCMainTableViewCell", bundle: nil), forCellReuseIdentifier: "fourmCell")
 
 
         
@@ -52,11 +52,11 @@ class OWCMainTableViewController: UITableViewController {
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> OWCChatTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("chatCell", forIndexPath: indexPath) as! OWCChatTableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> OWCMainTableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("fourmCell", forIndexPath: indexPath) as! OWCMainTableViewCell
         
         // Configure the cell...
-        cell.textLabel?.text = (self.MainViewDataManager?.tableViewObjects[indexPath.row] as! PFUser).username
+        cell.setUpCell((self.MainViewDataManager?.tableViewObjects[indexPath.row])! as! PFObject)
         
         return cell
     }
