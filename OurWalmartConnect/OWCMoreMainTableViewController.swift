@@ -34,11 +34,11 @@ class OWCMoreMainTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 6
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 4{
+        if indexPath.row == 5{
             performSegueWithIdentifier("returnToLogin", sender: self)
         }
     }
