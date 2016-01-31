@@ -30,7 +30,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="Il3-Lj-44p" kind="presentation" identifier="toLogin" id="Ine-0L-omi"/>
+                                    <segue destination="pmZ-F8-1Yt" kind="presentation" identifier="toLogin" id="Ine-0L-omi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tps-Uy-bBm">
@@ -170,7 +170,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2929" y="316"/>
+            <point key="canvasLocation" x="3741" y="316"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="efh-io-ITA">
@@ -227,7 +227,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xoo-wc-0XN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676" y="316"/>
+            <point key="canvasLocation" x="4488" y="315.5"/>
         </scene>
         <!--More Profile Main View Controller-->
         <scene sceneID="fMo-IJ-QJj">
@@ -516,7 +516,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYo-Gi-AIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2109" y="316"/>
+            <point key="canvasLocation" x="2921" y="316"/>
         </scene>
         <!--More-->
         <scene sceneID="OJN-4C-vKP">
@@ -692,7 +692,7 @@
             </objects>
             <point key="canvasLocation" x="-19" y="1042"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="OQN-5q-5c3">
             <objects>
                 <viewController id="Il3-Lj-44p" customClass="OWCLoginViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
@@ -704,26 +704,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-im-oTo">
-                                <rect key="frame" x="136" y="28" width="329" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-im-oTo">
+                                <rect key="frame" x="136" y="141" width="340" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IrP-jT-OuR"/>
+                                    <constraint firstAttribute="width" constant="340" id="P3x-bL-qFJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HO5-9e-oys">
-                                <rect key="frame" x="136" y="79" width="329" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HO5-9e-oys">
+                                <rect key="frame" x="136" y="218" width="340" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jQy-wF-L6L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-tJ-hpt">
-                                <rect key="frame" x="281" y="134" width="38" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-6c-Cba">
+                                <rect key="frame" x="136" y="118" width="38" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="Opv-Cp-RGH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.3921568627" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.38823529410000002" green="0.3921568627" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smy-gS-pKU">
+                                <rect key="frame" x="136" y="195" width="70" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="YJo-7F-R7j"/>
+                                    <constraint firstAttribute="height" constant="15" id="iNS-vW-idp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.3921568627" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.38823529410000002" green="0.3921568627" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-tJ-hpt">
+                                <rect key="frame" x="136" y="290" width="340" height="45"/>
+                                <color key="backgroundColor" red="0.63529411759999999" green="0.87450980389999999" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="Il3-Lj-44p" eventType="touchUpInside" id="qVa-dM-gfp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Forgot your password?  Click here." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqq-Pi-WKA">
+                                <rect key="frame" x="197" y="417" width="235" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="1bV-nf-tDJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.39215686274509803" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.38823529411764707" green="0.39215686274509803" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcr-9X-5bl">
+                                <rect key="frame" x="136" y="360" width="340" height="44"/>
+                                <color key="backgroundColor" red="0.28630875559374025" green="0.45661128350930363" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9eB-im-oTo" firstAttribute="top" secondItem="nqq-Pi-WKA" secondAttribute="bottom" constant="8" symbolic="YES" id="1hX-D8-eo6"/>
+                            <constraint firstItem="HO5-9e-oys" firstAttribute="leading" secondItem="smy-gS-pKU" secondAttribute="leading" id="7Kg-Z2-2RO"/>
+                            <constraint firstItem="HO5-9e-oys" firstAttribute="top" secondItem="smy-gS-pKU" secondAttribute="bottom" constant="8" symbolic="YES" id="82e-MZ-cd5"/>
+                            <constraint firstItem="nqq-Pi-WKA" firstAttribute="top" secondItem="epu-L1-xKW" secondAttribute="bottom" constant="54" id="MUw-tm-PON"/>
+                            <constraint firstItem="smy-gS-pKU" firstAttribute="leading" secondItem="9eB-im-oTo" secondAttribute="leading" id="NjE-44-5gt"/>
+                            <constraint firstItem="smy-gS-pKU" firstAttribute="top" secondItem="9eB-im-oTo" secondAttribute="bottom" constant="24" id="Smw-UQ-s32"/>
+                            <constraint firstItem="QC9-wg-ENB" firstAttribute="top" secondItem="V6h-tJ-hpt" secondAttribute="bottom" constant="270" id="WWT-ZR-LgU"/>
+                            <constraint firstItem="HO5-9e-oys" firstAttribute="leading" secondItem="V6h-tJ-hpt" secondAttribute="leading" id="Wn3-eg-IWp"/>
+                            <constraint firstItem="nqq-Pi-WKA" firstAttribute="leading" secondItem="qhk-kM-EfD" secondAttribute="leading" constant="136" id="XsC-xV-JwP"/>
+                            <constraint firstItem="V6h-tJ-hpt" firstAttribute="top" secondItem="HO5-9e-oys" secondAttribute="bottom" constant="37" id="ZpO-co-h6I"/>
+                            <constraint firstItem="HO5-9e-oys" firstAttribute="trailing" secondItem="9eB-im-oTo" secondAttribute="trailing" id="l3e-SI-0mg"/>
+                            <constraint firstItem="HO5-9e-oys" firstAttribute="trailing" secondItem="V6h-tJ-hpt" secondAttribute="trailing" id="mCM-Tv-6Vj"/>
+                            <constraint firstItem="nqq-Pi-WKA" firstAttribute="leading" secondItem="9eB-im-oTo" secondAttribute="leading" id="zaV-zj-N7Y"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="zRY-NL-Dob"/>
                     <connections>
                         <outlet property="emailTextField" destination="9eB-im-oTo" id="8nb-9C-wxz"/>
                         <outlet property="passwordTextField" destination="HO5-9e-oys" id="FAg-PJ-heo"/>
@@ -732,7 +798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QV-8a-bSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="301"/>
+            <point key="canvasLocation" x="1529" y="301"/>
         </scene>
         <!--Select Store View Controller-->
         <scene sceneID="Hml-le-VfF">
@@ -965,6 +1031,24 @@
             </objects>
             <point key="canvasLocation" x="3716" y="3191.5"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dCA-w8-A86">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pmZ-F8-1Yt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qKd-6g-znY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Il3-Lj-44p" kind="relationship" relationship="rootViewController" id="sTl-FA-OTd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="piE-Xq-a7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="301"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Intro Logo" width="424" height="444"/>
@@ -973,6 +1057,6 @@
         <image name="redoBtn" width="57" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1IE-Aw-Pw1"/>
+        <segue reference="FJp-JJ-fbh"/>
     </inferredMetricsTieBreakers>
 </document>
