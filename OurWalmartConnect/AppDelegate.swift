@@ -87,9 +87,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let titleDict: NSDictionary = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont(name: "Apple SD Gothic Neo", size: 18)!]
         UINavigationBar.appearance().titleTextAttributes = titleDict as? [String : AnyObject]
         UIBarButtonItem.appearance().setTitleTextAttributes(titleDict as? [String : AnyObject], forState: UIControlState.Normal)
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = OWCGreen
         UINavigationBar.appearance().translucent = false
-        UINavigationBar.appearance().barTintColor = UIColor.blueColor()
+        UINavigationBar.appearance().barTintColor = OWCGreen
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
     }
