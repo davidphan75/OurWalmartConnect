@@ -30,4 +30,14 @@ class OWCConnectWalmartTableViewCell: UITableViewCell {
 
     }
     
+    func setUpCellAsPerson(person:PFUser){
+        self.cityLabel.text = person.objectForKey("Name") as? String
+        
+        let associatedStore = person.objectForKey("associatedStore")as! PFObject
+        let address = (associatedStore.objectForKey("City") as! String) + ", " + (associatedStore.objectForKey("State") as! String)
+        
+        self.addressLabel.text =  address
+
+    }
+    
 }

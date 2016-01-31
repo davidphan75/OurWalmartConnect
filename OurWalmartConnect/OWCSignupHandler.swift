@@ -54,10 +54,12 @@ class OWCSignUpHandler {
                         newUser.password = password
                         newUser.email = email
                         newUser.setObject(storeLocation, forKey: "associatedStore")
-                        newUser.setObject(name, forKey: "name")
+                        newUser.setObject(name, forKey: "Name")
                         newUser.setObject(isAdvisor, forKey: "isAdvisor")
                         
-                        objects!.first!.deleteInBackground()
+                        if objects?.count > 0{
+                            objects!.first!.deleteInBackground()
+                        }
                         newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
                             
                             print("here")

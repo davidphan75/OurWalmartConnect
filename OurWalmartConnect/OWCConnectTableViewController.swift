@@ -20,7 +20,7 @@ class OWCConnectTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         //TableView SetuUp
-        tableView.registerNib(UINib(nibName: "DSDiscoverTableViewCell", bundle: nil), forCellReuseIdentifier: "connectCell")
+        tableView.registerNib(UINib(nibName: "OWCConnectWalmartTableViewCell", bundle: nil), forCellReuseIdentifier: "connectCell")
         
     }
 
@@ -43,16 +43,21 @@ class OWCConnectTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tester", forIndexPath: indexPath)
-
+        
         // Configure the cell...
         if (self.parentViewController as! OWCConnectMainView).connectSegmentedControl.selectedSegmentIndex == 0{
+            let cell = tableView.dequeueReusableCellWithIdentifier("connectCell", forIndexPath: indexPath) as! OWCConnectWalmartTableViewCell
+            let object = ((self.parentViewController as! OWCConnectMainView).connectDataManager?.tableViewObjects[indexPath.row])!
+            cell.setUpCell(object as! PFObject)
+            return cell
             
         }else{
-            
+            let cell = tableView.dequeueReusableCellWithIdentifier("connectCell", forIndexPath: indexPath) as! OWCConnectWalmartTableViewCell
+            let object = ((self.parentViewController as! OWCConnectMainView).connectDataManager?.tableViewObjects[indexPath.row])!
+            cell.setUpCellAsPerson(object as! PFUser)
+            return cell
         }
 
-        return cell
     }
 
 

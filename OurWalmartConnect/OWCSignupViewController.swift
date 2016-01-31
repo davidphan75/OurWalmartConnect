@@ -102,6 +102,10 @@ class OWCSignupViewController: UIViewController,UITextFieldDelegate,userDidSelec
     
     @IBAction func signUpBUttonPressed(sender: AnyObject) {
         HUD.show(true)
+        
+        if isAdvisor == false{
+            self.advisorCode = ""
+        }
         OWCSignUpHandler.signUp(storeLocation: self.selectedWalmart!, password: passwordTextField.text!, email: emailTextField.text!, advisorCode:self.advisorCode!, isAdvisor: self.isAdvisor!, name: self.nameTextField.text!) { (success, error) -> Void in
             if success {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in

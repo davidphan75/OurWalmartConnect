@@ -45,6 +45,8 @@ class OWCConnectMainView: UIViewController,UISearchBarDelegate, MKMapViewDelegat
         //Set Up Data Manager
         let query = PFQuery(className: "walmartLocations")
         query.whereKeyExists("Location")
+        let currentLocation = PFGeoPoint(location: OWCLocationManager.sharedInstance.userLocation)
+        query.whereKey("Location", nearGeoPoint: currentLocation, withinMiles: 100)
         self.connectDataManager = OWCConnectTableViewDataManager(currentViewController: childVC!
             , query: query)
         self.connectDataManager?.delegate = self
