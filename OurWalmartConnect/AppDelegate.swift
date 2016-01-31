@@ -27,6 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Configure Push Notification
         self.configurePushNotifications(application)
+        
+        //Keep User logged in until explicitly logging out
+        if PFUser.currentUser() != nil {
+            let vc = storyboard.instantiateViewControllerWithIdentifier("mainTabBar")
+            self.window!.rootViewController = vc
+        }
+
 
         
         return true
