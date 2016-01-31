@@ -8,7 +8,9 @@
 
 import UIKit
 
-class OWCPostFourmPage2ViewController: UITabBarController {
+class OWCPostFourmPage2ViewController: UIViewController {
+    
+    var fourmPost:PFObject?
 
     override func viewDidLoad() {
         super.viewDidLoad()
