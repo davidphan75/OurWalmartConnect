@@ -65,6 +65,9 @@
                             <constraint firstItem="Tps-Uy-bBm" firstAttribute="leading" secondItem="u08-yq-IRF" secondAttribute="leading" id="yNs-KT-jOb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="Dxt-xT-IIJ" kind="show" identifier="loggedIn" id="0yT-DI-5Hx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -625,13 +628,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJh-Ix-adC">
-                                <rect key="frame" x="273" y="424" width="55" height="30"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="signUpBUttonPressed:" destination="9fa-Wb-3LS" eventType="touchUpInside" id="eud-Qs-yCC"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="77m-af-ER3">
                                 <rect key="frame" x="90" y="90" width="420" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -661,6 +657,15 @@
                                     <outlet property="delegate" destination="9fa-Wb-3LS" id="j9b-LC-zWE"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJh-Ix-adC">
+                                <rect key="frame" x="273" y="440" width="55" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpBUttonPressed:" destination="9fa-Wb-3LS" eventType="touchUpInside" id="eud-Qs-yCC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -684,13 +689,18 @@
                             <constraint firstItem="NRj-Pn-Ye5" firstAttribute="centerX" secondItem="yJh-Ix-adC" secondAttribute="centerX" id="teh-7u-jzB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Account" id="Zxw-Fr-58f"/>
+                    <navigationItem key="navigationItem" title="Create Account" id="Zxw-Fr-58f">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="3gJ-cD-hPh">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="9fa-Wb-3LS" id="pvI-eW-9VM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="fbC-BR-Bpk" id="4KX-pT-rY7"/>
                         <outlet property="nameTextField" destination="77m-af-ER3" id="FBU-CK-BPY"/>
                         <outlet property="passwordTextField" destination="NRj-Pn-Ye5" id="323-7A-iyu"/>
                         <outlet property="storeLocationTextField" destination="L5w-26-vGe" id="aRm-4I-VuA"/>
-                        <segue destination="Dxt-xT-IIJ" kind="show" identifier="signedUp" id="1IE-Aw-Pw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEV-zm-lSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -816,12 +826,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="zRY-NL-Dob">
-                        <barButtonItem key="leftBarButtonItem" image="Back Arrow1x" id="K6L-KJ-EZJ"/>
+                        <barButtonItem key="leftBarButtonItem" image="Back Arrow1x" id="K6L-KJ-EZJ">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="Il3-Lj-44p" id="qxR-L6-RcX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="9eB-im-oTo" id="8nb-9C-wxz"/>
                         <outlet property="passwordTextField" destination="HO5-9e-oys" id="FAg-PJ-heo"/>
-                        <segue destination="Dxt-xT-IIJ" kind="show" identifier="loggedIn" id="FJp-JJ-fbh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5QV-8a-bSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1053,7 +1066,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Il3-Lj-44p" kind="relationship" relationship="rootViewController" id="sTl-FA-OTd"/>
+                        <segue destination="Il3-Lj-44p" kind="relationship" relationship="rootViewController" id="tYc-4M-JEf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piE-Xq-a7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1071,7 +1084,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="9fa-Wb-3LS" kind="relationship" relationship="rootViewController" id="68s-uf-RMK"/>
+                        <segue destination="9fa-Wb-3LS" kind="relationship" relationship="rootViewController" id="pfN-sT-S6e"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGA-Pz-S3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1087,8 +1100,5 @@
         <image name="locationButton" width="57" height="57"/>
         <image name="redoBtn" width="57" height="57"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="1IE-Aw-Pw1"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

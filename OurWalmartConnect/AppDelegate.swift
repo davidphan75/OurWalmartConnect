@@ -33,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = storyboard.instantiateViewControllerWithIdentifier("mainTabBar")
             self.window!.rootViewController = vc
         }
+        
+        //Set Up Navi and Tab Bar
+        setupTabBarGlobal()
+        setupNavigationBarGlobal()
 
 
         
@@ -78,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupTabBarGlobal() {
         
         UITabBar.appearance().tintColor = UIColor.whiteColor()
-        UITabBar.appearance().barTintColor = UIColor.blueColor()
+        //UITabBar.appearance().barTintColor = UIColor.blueColor()
         
     }
     
@@ -87,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let titleDict: NSDictionary = [NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont(name: "Apple SD Gothic Neo", size: 18)!]
         UINavigationBar.appearance().titleTextAttributes = titleDict as? [String : AnyObject]
         UIBarButtonItem.appearance().setTitleTextAttributes(titleDict as? [String : AnyObject], forState: UIControlState.Normal)
-        UINavigationBar.appearance().tintColor = OWCGreen
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barTintColor = OWCGreen
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)

@@ -21,6 +21,7 @@ class OWCSignupViewController: UIViewController,UITextFieldDelegate,userDidSelec
     var activeField:UITextField?
     var selectedWalmart:PFObject?
     var HUD: MBProgressHUD!
+    var parentVC:OWCFirstLaunchViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +111,12 @@ class OWCSignupViewController: UIViewController,UITextFieldDelegate,userDidSelec
             if success {
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
 //                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DSCustomTabBarController")
-                    self.performSegueWithIdentifier("signedUp", sender: self)
+                    //self.performSegueWithIdentifier("signedUp", sender: self)
+                    //self.parentVC!.performSegueWithIdentifier("loggedIn", sender: nil)
+                    
+                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("mainTabBar")
+                    self.presentViewController(viewController, animated: true, completion: nil)
+
                 })
             } else {
                 switch error! {
@@ -118,7 +124,10 @@ class OWCSignupViewController: UIViewController,UITextFieldDelegate,userDidSelec
                     self.HUD.hide(true)
                     let alertController = UIAlertController(title: "Error!", message: "Please select a store location. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
+                    // getUserDetailsFromLinkedIn()
+                    
+                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DSCustomTabBarController")
+                    self.presentViewController(viewController, animated: true, completion: nil)
                     
                 case .emailInvalid:
                     self.HUD?.hide(true)
@@ -155,6 +164,9 @@ class OWCSignupViewController: UIViewController,UITextFieldDelegate,userDidSelec
 
     }
     
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

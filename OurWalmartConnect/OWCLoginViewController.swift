@@ -14,6 +14,7 @@ class OWCLoginViewController: UIViewController, MBProgressHUDDelegate, UITextFie
     @IBOutlet weak var passwordTextField: UITextField!
     
     var HUD: MBProgressHUD!
+    var parentVC:OWCFirstLaunchViewController?
 
     
     override func viewDidLoad() {
@@ -40,7 +41,11 @@ class OWCLoginViewController: UIViewController, MBProgressHUDDelegate, UITextFie
         HUD.show(true)
         OWCParseLoginHandler.signIn(username: emailTextField.text!, password: passwordTextField.text!) { (success, error) -> Void in
             if success {
-                self.performSegueWithIdentifier("loggedIn", sender: nil)
+                //self.parentVC!.performSegueWithIdentifier("loggedIn", sender: nil)
+                //self.performSegueWithIdentifier("loggedIn", sender: nil)
+                let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("mainTabBar")
+                self.presentViewController(viewController, animated: true, completion: nil)
+                
             } else {
                 switch error! {
                 case .usernameOrPasswordIncorrect:
@@ -63,6 +68,9 @@ class OWCLoginViewController: UIViewController, MBProgressHUDDelegate, UITextFie
     }
     
 
+    @IBAction func backButtonPressed(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
