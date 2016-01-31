@@ -15,13 +15,33 @@ class OWCMoreProfileDetailViewController: UIViewController {
     
     @IBOutlet weak var bioTextView: UITextView!
     
+    var user:PFUser?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        let store = PFUser.currentUser()?.objectForKey("associatedStore") as! PFObject
-        self.storeLabel.text = (store.objectForKey("City") as! String) + ", " + (store.objectForKey("State") as! String)
+        if user == nil{
+            user = PFUser.currentUser()
+        }
+        
+        if (user!.objectForKey("isAdvisor")! as! Bool == true){
+            self.nameLabel.text = "Advisor"
+        }else{
+             self.nameLabel.text = "Employee"
+        }
+        let store = user!.objectForKey("associatedStore") as? PFObject
+        store!.fetchIfNeededInBackgroundWithBlock {
+            (store: PFObject?, error: NSError?) -> Void in
+            if error == nil {
+               self.storeLabel.text = (store!.objectForKey("City") as! String) + ", " + (store!.objectForKey("State") as! String)
+            } else {
+                print("error fetching")
+            }
+        }
+
+        
         
     }
 
