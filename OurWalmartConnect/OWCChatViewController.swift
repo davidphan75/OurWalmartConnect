@@ -78,21 +78,19 @@ class OWCChatViewController: JSQMessagesViewController {
     //Update function if you intend to have user profile images
     func loadUserAvatarImage(){
         
-        let file = aChatManager?.userChattingWith?.objectForKey("profileImage") as? PFFile
-        file?.getDataInBackgroundWithBlock({ (imageData:NSData?, error: NSError?) -> Void in
-            if error == nil || imageData != nil {
-                self.recipientAvatarImage = UIImage(data:imageData!)!
+        getUserProfilePicture(PFUser.currentUser()!, completion: { (success, userImage) -> Void in
+            if success {
+                self.senderAvatarImage = userImage!
+                self.collectionView!.reloadData()
             }
         })
         
-        
-        let file2 = PFUser.currentUser()!.objectForKey("profileImage") as? PFFile
-        file2?.getDataInBackgroundWithBlock({ (imageData:NSData?, error: NSError?) -> Void in
-            if error == nil || imageData != nil {
-                self.recipientAvatarImage = UIImage(data:imageData!)!
-            }
-        })
-
+//        getUserProfilePicture((aChatManager?.userChattingWith)!, completion: { (success, userImage) -> Void in
+//            if success {
+//                self.senderAvatarImage = userImage!
+//                self.collectionView!.reloadData()
+//            }
+//        })
 //
 //        self.senderAvatarImage = UIImage(named: "david.jpg")!
 //        

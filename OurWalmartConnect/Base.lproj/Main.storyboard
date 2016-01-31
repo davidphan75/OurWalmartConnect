@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="1529" y="1042"/>
         </scene>
-        <!--Connect Main View-->
+        <!--Connect-->
         <scene sceneID="2a5-0t-Wyb">
             <objects>
                 <viewController id="0q9-QP-Ctj" customClass="OWCConnectMainView" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,7 +159,7 @@
                             <constraint firstItem="UbM-ty-vmU" firstAttribute="top" secondItem="6V3-Xd-TRU" secondAttribute="bottom" id="xmM-YO-r2S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="649-Lt-Qg0"/>
+                    <navigationItem key="navigationItem" title="Connect" id="649-Lt-Qg0"/>
                     <connections>
                         <outlet property="connectSegmentedControl" destination="UbM-ty-vmU" id="oaA-8Y-h4F"/>
                         <outlet property="mapView" destination="WBW-wC-DQs" id="9cI-Lc-dDu"/>
@@ -175,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="3741" y="316"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Chat-->
         <scene sceneID="efh-io-ITA">
             <objects>
                 <tableViewController id="gAq-7F-Z9i" customClass="OWCChatListTableViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
@@ -198,7 +198,7 @@
                             <outlet property="delegate" destination="gAq-7F-Z9i" id="Amb-Bg-joS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="SNP-1S-zOH"/>
+                    <navigationItem key="navigationItem" title="Chat" id="SNP-1S-zOH"/>
                     <connections>
                         <segue destination="Mte-aL-3le" kind="show" identifier="startChat" id="l7e-aN-y87"/>
                     </connections>
@@ -355,18 +355,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write A Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngr-hz-s66">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write A Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngr-hz-s66">
                                 <rect key="frame" x="20" y="89" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title or Topic of your post" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-K0-cp0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title or Topic of your post" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gbr-K0-cp0">
                                 <rect key="frame" x="20" y="118" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your questions, stories, advice, or anything you want to share." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-iR-X49">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your questions, stories, advice, or anything you want to share." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cxc-iR-X49">
                                 <rect key="frame" x="20" y="156" width="560" height="424"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -374,6 +374,18 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cxc-iR-X49" firstAttribute="top" secondItem="Gbr-K0-cp0" secondAttribute="bottom" constant="8" symbolic="YES" id="Agc-iG-MYn"/>
+                            <constraint firstItem="Gbr-K0-cp0" firstAttribute="trailing" secondItem="ngr-hz-s66" secondAttribute="trailing" id="Flw-xx-qCW"/>
+                            <constraint firstItem="Gbr-K0-cp0" firstAttribute="trailing" secondItem="Dih-QW-0hh" secondAttribute="trailingMargin" id="Ie7-hf-1yd"/>
+                            <constraint firstItem="Gbr-K0-cp0" firstAttribute="leading" secondItem="ngr-hz-s66" secondAttribute="leading" id="KJi-li-dac"/>
+                            <constraint firstItem="Gbr-K0-cp0" firstAttribute="trailing" secondItem="cxc-iR-X49" secondAttribute="trailing" id="b8N-fe-x2M"/>
+                            <constraint firstItem="Gbr-K0-cp0" firstAttribute="leading" secondItem="cxc-iR-X49" secondAttribute="leading" id="duX-7Y-jqQ"/>
+                            <constraint firstItem="cxc-iR-X49" firstAttribute="leading" secondItem="Dih-QW-0hh" secondAttribute="leadingMargin" id="hhe-fX-kdl"/>
+                            <constraint firstItem="ngr-hz-s66" firstAttribute="top" secondItem="M9B-E8-1DI" secondAttribute="bottom" constant="25" id="rTQ-n5-Pv1"/>
+                            <constraint firstAttribute="bottom" secondItem="cxc-iR-X49" secondAttribute="bottom" constant="20" symbolic="YES" id="trh-NH-zGT"/>
+                            <constraint firstItem="Gbr-K0-cp0" firstAttribute="top" secondItem="ngr-hz-s66" secondAttribute="bottom" constant="8" symbolic="YES" id="ujh-C6-NSa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2zQ-wA-skO">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="d9n-tN-ESw">
@@ -771,7 +783,7 @@
             </objects>
             <point key="canvasLocation" x="2929" y="2535"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Inform-->
         <scene sceneID="Qa8-hV-xz4">
             <objects>
                 <tableViewController id="ht6-iN-cN4" sceneMemberID="viewController">
@@ -794,7 +806,7 @@
                             <outlet property="delegate" destination="ht6-iN-cN4" id="xsy-Dq-3PD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="OAy-Q7-hTr"/>
+                    <navigationItem key="navigationItem" title="Inform" id="OAy-Q7-hTr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUF-31-tfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -804,7 +816,7 @@
         <scene sceneID="Tiw-XO-fS0">
             <objects>
                 <navigationController id="siM-rq-k7f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="bubble_min.png" id="zqP-QF-7Nd"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="close" selectedImage="redoBtn" id="zqP-QF-7Nd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ql9-do-6do">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1571,7 +1583,6 @@
         <image name="Back Arrow1x" width="12" height="19"/>
         <image name="Intro Logo" width="424" height="444"/>
         <image name="Line" width="680" height="2"/>
-        <image name="bubble_min.png" width="48" height="35"/>
         <image name="close" width="57" height="57"/>
         <image name="locationButton" width="57" height="57"/>
         <image name="redoBtn" width="57" height="57"/>

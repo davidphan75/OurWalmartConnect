@@ -38,12 +38,13 @@ class OWCMainTableViewCell: UITableViewCell {
     
     func setUpCell(fourmTopic:PFObject){
         self.titleLabel.text = fourmTopic.objectForKey("title") as? String
-        self.numberOfCommentLabel.text = "\(fourmTopic.objectForKey("numberOfComments") as! Int)"
+        self.numberOfCommentLabel.text = "\(fourmTopic.objectForKey("numberOfComments") as! Int) Comments"
         self.messageBodyLabel.text = fourmTopic.objectForKey("messageBody") as? String
         self.nameAndLocationLabel.text = (fourmTopic.objectForKey("posterName") as! String) + ", " + (fourmTopic.objectForKey("location") as! String)
         self.profileImageView.file = fourmTopic.objectForKey("profileImage") as? PFFile
+        self.profileImageView.loadInBackground()
         self.categoryLabel.text! = fourmTopic.objectForKey("category") as! String
-        self.numberOfUpVoteLabel.text = "\(fourmTopic.objectForKey("numberOfUpVotes") as! Int)"
+        self.numberOfUpVoteLabel.text = "\(fourmTopic.objectForKey("numberOfUpVotes") as! Int) Up Votes"
         
         //time?
         //self.timeLabel.text = fourmTopic.objectForKey("createdAt") as! String

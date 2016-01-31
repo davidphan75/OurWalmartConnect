@@ -28,7 +28,7 @@ class OWCMainTableViewController: UITableViewController,UISearchBarDelegate {
         self.MainViewDataManager = OWCTableViewDataManager(currentViewController: self, query: query)
         
         //TableView SetuUp
-        tableView.separatorColor = UIColor.whiteColor()
+        //tableView.separatorColor = UIColor.whiteColor()
         tableView.registerNib(UINib(nibName: "OWCMainTableViewCell", bundle: nil), forCellReuseIdentifier: "fourmCell")
         tableView.rowHeight = 150
 

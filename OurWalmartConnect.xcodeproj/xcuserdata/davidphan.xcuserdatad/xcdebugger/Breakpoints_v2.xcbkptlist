@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OurWalmartConnect/OWCChatViewController.swift"
-            timestampString = "475953601.74231"
+            timestampString = "475954308.494156"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "loadMessages()"
             landmarkType = "5">
          </BreakpointContent>

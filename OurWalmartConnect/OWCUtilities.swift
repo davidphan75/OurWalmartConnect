@@ -40,3 +40,34 @@ func imageResize(imageObj:UIImage, sizeChange:CGSize)-> UIImage {
     UIGraphicsEndImageContext() // !!!
     return scaledImage
 }
+
+func getUserProfilePicture(user: PFUser, completion: (success: Bool, userImage: UIImage?) -> Void) {
+    
+    let pictureQuery = PFUser.query()
+    pictureQuery!.whereKey("username", equalTo: user.username!)
+    
+    pictureQuery!.getFirstObjectInBackgroundWithBlock {(object: PFObject?, error: NSError?) -> Void in
+        if object != nil {
+            
+            let file = object?.objectForKey("profilePicture") as? PFFile
+            file?.getDataInBackgroundWithBlock({ (imageData:NSData?, error: NSError?) -> Void in
+                if error == nil || imageData != nil {
+                    let image = UIImage(data:imageData!)
+                    completion(success: true, userImage: image!)
+                    //println("Successfully downloaded the profile picture")
+                } else {
+                    let image = UIImage(named: "defaultUserImage")
+                    completion(success: false, userImage: image!)
+                    //println("The profile picture from User request failed")
+                }
+            })
+            
+        } else {
+            
+            let image = UIImage(named: "defaultUserImage")
+            completion(success: false, userImage: image!)
+            //println("The profile picture from User request failed")
+        }
+    }
+}
+
