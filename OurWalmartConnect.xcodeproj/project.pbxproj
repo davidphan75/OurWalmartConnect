@@ -17,6 +17,8 @@
 		B12CF3271C5E2AAC00952E2E /* OWCMainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF3261C5E2AAC00952E2E /* OWCMainTabBarController.swift */; };
 		B12CF32A1C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF3291C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift */; };
 		B12CF32C1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF32B1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift */; };
+		B12CF32E1C5E537900952E2E /* OWCPostCategoryOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF32D1C5E537900952E2E /* OWCPostCategoryOptionTableViewController.swift */; };
+		B12CF3301C5E53A000952E2E /* OWCPostAsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CF32F1C5E53A000952E2E /* OWCPostAsTableViewController.swift */; };
 		B132AD7C1C5E128C00D458FA /* OWCMoreMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B132AD7B1C5E128C00D458FA /* OWCMoreMainTableViewController.swift */; };
 		B160D97E1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160D97D1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift */; };
 		B160D9811C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160D97F1C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift */; };
@@ -145,6 +147,8 @@
 		B12CF3261C5E2AAC00952E2E /* OWCMainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMainTabBarController.swift; sourceTree = "<group>"; };
 		B12CF3291C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCPostFourmPage1ViewController.swift; sourceTree = "<group>"; };
 		B12CF32B1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCPostFourmPage2ViewController.swift; sourceTree = "<group>"; };
+		B12CF32D1C5E537900952E2E /* OWCPostCategoryOptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCPostCategoryOptionTableViewController.swift; sourceTree = "<group>"; };
+		B12CF32F1C5E53A000952E2E /* OWCPostAsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCPostAsTableViewController.swift; sourceTree = "<group>"; };
 		B132AD7B1C5E128C00D458FA /* OWCMoreMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMoreMainTableViewController.swift; sourceTree = "<group>"; };
 		B160D97D1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectTableViewDataManager.swift; sourceTree = "<group>"; };
 		B160D97F1C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectWalmartTableViewCell.swift; sourceTree = "<group>"; };
@@ -401,6 +405,8 @@
 			children = (
 				B12CF3291C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift */,
 				B12CF32B1C5E3B9000952E2E /* OWCPostFourmPage2ViewController.swift */,
+				B12CF32D1C5E537900952E2E /* OWCPostCategoryOptionTableViewController.swift */,
+				B12CF32F1C5E53A000952E2E /* OWCPostAsTableViewController.swift */,
 			);
 			name = Post;
 			sourceTree = "<group>";
@@ -915,6 +921,7 @@
 				B160D97E1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift in Sources */,
 				B103D6111C5CC4F6006A68C5 /* OWCMainTableViewCell.swift in Sources */,
 				B132AD7C1C5E128C00D458FA /* OWCMoreMainTableViewController.swift in Sources */,
+				B12CF3301C5E53A000952E2E /* OWCPostAsTableViewController.swift in Sources */,
 				B1D2E1071C5C4F99009A5A3B /* OWCChatMessage.swift in Sources */,
 				B17355E71C5E02420063A020 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				B17355E01C5E02420063A020 /* UIImage+JSQMessages.m in Sources */,
@@ -922,6 +929,7 @@
 				B17355EC1C5E02420063A020 /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				B17355FE1C5E02420063A020 /* JSQMessagesInputToolbar.m in Sources */,
 				B17355DD1C5E02420063A020 /* NSString+JSQMessages.m in Sources */,
+				B12CF32E1C5E537900952E2E /* OWCPostCategoryOptionTableViewController.swift in Sources */,
 				B17355EB1C5E02420063A020 /* JSQMessagesBubblesSizeCalculator.m in Sources */,
 				B17355E11C5E02420063A020 /* UIView+JSQMessages.m in Sources */,
 				B17356031C5E02420063A020 /* JSQMessagesToolbarContentView.m in Sources */,

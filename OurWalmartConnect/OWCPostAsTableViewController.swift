@@ -1,19 +1,15 @@
 //
-//  OWCMainTableViewController.swift
+//  OWCPostAsTableViewController.swift
 //  OurWalmartConnect
 //
-//  Created by David Phan on 1/30/16.
+//  Created by David Phan on 1/31/16.
 //  Copyright © 2016 David. All rights reserved.
 //
 
 import UIKit
 
-class OWCMainTableViewController: UITableViewController,UISearchBarDelegate {
+class OWCPostAsTableViewController: UITableViewController {
 
-    var MainViewDataManager:OWCTableViewDataManager?
-
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,17 +18,6 @@ class OWCMainTableViewController: UITableViewController,UISearchBarDelegate {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        //Set Up Data Manager
-        let query = PFQuery(className: "fourmTopic")
-        self.MainViewDataManager = OWCTableViewDataManager(currentViewController: self, query: query)
-        
-        //TableView SetuUp
-        tableView.separatorColor = UIColor.whiteColor()
-        tableView.registerNib(UINib(nibName: "OWCMainTableViewCell", bundle: nil), forCellReuseIdentifier: "fourmCell")
-
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,19 +34,18 @@ class OWCMainTableViewController: UITableViewController,UISearchBarDelegate {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (self.MainViewDataManager?.tableViewObjects.count)!
+        return 2
     }
 
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> OWCMainTableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("fourmCell", forIndexPath: indexPath) as! OWCMainTableViewCell
-        
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
         // Configure the cell...
-        cell.setUpCell((self.MainViewDataManager?.tableViewObjects[indexPath.row])! as! PFObject)
-        
+
         return cell
     }
-
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -98,16 +82,6 @@ class OWCMainTableViewController: UITableViewController,UISearchBarDelegate {
     }
     */
 
-    @IBAction func tappedScreen(sender: AnyObject) {
-        self.searchBar.resignFirstResponder()
-    }
-    
-    
-    @IBAction func postButtonPressed(sender: AnyObject) {
-//        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("postFourm1")
-//        self.presentViewController(viewController, animated: true, completion: nil)
-    }
-    
     /*
     // MARK: - Navigation
 
