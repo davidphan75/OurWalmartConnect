@@ -55,6 +55,7 @@ class OWCSignUpHandler {
                         newUser.email = email
                         newUser.setObject(storeLocation, forKey: "associatedStore")
                         newUser.setObject(name, forKey: "name")
+                        newUser.setObject(isAdvisor, forKey: "isAdvisor")
                         
                         objects!.first!.deleteInBackground()
                         newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
@@ -62,6 +63,12 @@ class OWCSignUpHandler {
                             print("here")
                             // REMOVE BEFORE RELEASE
                             if debugMode && error == nil {
+                                
+                                //associate user with store
+                                let relation = storeLocation.relationForKey("users")
+                                relation.addObject(PFUser.currentUser()!)
+                                storeLocation.saveInBackground()
+                                
                                 completion(success: true, error: nil)
                             } else if error != nil {
                                 print("\(error)")

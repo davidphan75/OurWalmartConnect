@@ -27,7 +27,14 @@ class OWCChatTableViewCell: UITableViewCell {
     }
     
     func setUpCell(chatObject:PFObject){
-        
+        self.messageLabel.text = chatObject.objectForKey("lastMessage") as? String
+        let users:[String] = (chatObject.objectForKey("users") as! [String])
+        if users[0] == (PFUser.currentUser()?.objectForKey("Name") as! String){
+            self.nameLabel.text = users[1]
+        }else{
+            self.nameLabel.text = users[0]
+
+        }
     }
     
 }

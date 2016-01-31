@@ -61,12 +61,26 @@ class OWCChatManager: NSObject {
         chat["ChatID"] = ChatID
         //chat["Description"] = description
         chat["lastUser"] = PFUser.currentUser()
-        chat["lastMessage"] = ""
-        chat["counter"] = 0
-        chat["updatedAction"] = NSDate()
-        //chat["url"] = Image
-        chat.saveInBackground()
-        self.currentChat = chat
+        
+        
+       
+        getPFUser(otherUser, completion: {(foundUser) -> Void in
+            
+            let currentUserName = PFUser.currentUser()?.objectForKey("Name") as? String
+            let otherUserName = foundUser.objectForKey("Name") as? String
+            
+            chat["users"] = [currentUserName!,otherUserName!] as [String]
+//            (chat["users"] as! PFObject).setObject([currentUserName!,otherUserName!] as [String], forKey: "users")
+            chat["lastMessage"] = ""
+            chat["counter"] = 0
+            
+            chat["updatedAction"] = NSDate()
+            //chat["url"] = Image
+            chat.saveInBackground()
+            self.currentChat = chat
+        })
+    
+       
         
     }
     

@@ -1,20 +1,23 @@
 //
-//  OWCTableViewDataManager.swift
+//  OWCConnectTableViewDataManager.swift
 //  OurWalmartConnect
 //
-//  Created by David Phan on 1/29/16.
+//  Created by David Phan on 1/30/16.
 //  Copyright © 2016 David. All rights reserved.
 //
 
 import Foundation
 
-
-class OWCTableViewDataManager: NSObject, MBProgressHUDDelegate {
+protocol OWCConnectTableViewDataManagerDelegate {
+    func loadMapAnnotations()
+}
+class OWCConnectTableViewDataManager: NSObject, MBProgressHUDDelegate {
     
     var currentViewController: UITableViewController?
     var tableViewObjects = [AnyObject]()
     var HUD: MBProgressHUD!
     var query:PFQuery?
+    var delegate:OWCConnectTableViewDataManagerDelegate?
     
     init(currentViewController: UITableViewController, query:PFQuery) {
         super.init()
@@ -38,9 +41,11 @@ class OWCTableViewDataManager: NSObject, MBProgressHUDDelegate {
             if error == nil {
                 self.tableViewObjects = objects!
                 print(objects?.count)
+                self.delegate?.loadMapAnnotations()
             }
             self.HUD.hide(true)
             self.currentViewController?.tableView.reloadData()
+            
         }
         
     }
@@ -51,13 +56,15 @@ class OWCTableViewDataManager: NSObject, MBProgressHUDDelegate {
             if error == nil {
                 self.tableViewObjects = objects!
                 print(objects?.count)
+                self.delegate?.loadMapAnnotations()
             }
             self.HUD.hide(true)
             self.currentViewController?.tableView.reloadData()
+            
         }
         
     }
-
     
-
+    
+    
 }

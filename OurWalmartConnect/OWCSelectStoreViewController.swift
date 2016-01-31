@@ -162,9 +162,9 @@ class OWCSelectStoreViewController: UIViewController, MKMapViewDelegate, MBProgr
             WalmartQuery.whereKey("Address", equalTo: selectedWalmart.subtitle!)
             
             WalmartQuery.getFirstObjectInBackgroundWithBlock({ (object: PFObject?, error: NSError?) -> Void in
-//                if (object == nil) {
+                if (object == nil) {
                 
-                    
+                    WalmartOnParse.setObject(1, forKey: "numberOfUsers")
                     WalmartOnParse.setObject(selectedWalmart.city!, forKey: "City")
                       WalmartOnParse.setObject(selectedWalmart.state!, forKey: "State")
                     WalmartOnParse.setObject(PFGeoPoint(latitude: selectedWalmart.location.coordinate.latitude, longitude: selectedWalmart.location.coordinate.longitude), forKey: "Location")
@@ -174,9 +174,18 @@ class OWCSelectStoreViewController: UIViewController, MKMapViewDelegate, MBProgr
                             print("The walmart could not be saved in the database!")
                         }
                     })
-//                } else {
-//                    WalmartOnParse = object!
-//                }
+                } else {
+                    if let number:Int = object?.objectForKey("numberOfUsers") as? Int{
+                        object?.setObject(number + 1, forKey: "numberOfUsers")
+                    }else{
+                        object?.setObject(1, forKey: "numberOfUsers")
+                    }
+                    
+                    object?.setObject(PFGeoPoint(latitude: selectedWalmart.location.coordinate.latitude, longitude: selectedWalmart.location.coordinate.longitude), forKey: "Location")
+                    
+                    object?.saveInBackground()
+                    WalmartOnParse = object!
+                }
                 
                 self.refreshHUD?.hide(true)
                 
