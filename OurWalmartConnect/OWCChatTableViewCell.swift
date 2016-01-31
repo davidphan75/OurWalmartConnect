@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ParseUI
 
 class OWCChatTableViewCell: UITableViewCell {
 
@@ -14,6 +15,7 @@ class OWCChatTableViewCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var profileImageView: PFImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,14 +29,23 @@ class OWCChatTableViewCell: UITableViewCell {
     }
     
     func setUpCell(chatObject:PFObject){
-        self.messageLabel.text = chatObject.objectForKey("lastMessage") as? String
-        let users:[String] = (chatObject.objectForKey("users") as! [String])
-        if users[0] == (PFUser.currentUser()?.objectForKey("Name") as! String){
-            self.nameLabel.text = users[1]
-        }else{
-            self.nameLabel.text = users[0]
-
-        }
+        
+        
+        self.profileImageView.file = chatObject.objectForKey("profileImage") as? PFFile
+        self.profileImageView.layer.cornerRadius = self.profileImageView.layer.frame.height/2
+        self.profileImageView.clipsToBounds = true
+        self.profileImageView.loadInBackground()
+        self.nameLabel.text = chatObject.objectForKey("Name") as? String
+//        self.messageLabel.text = chatObject.objectForKey("lastMessage") as? String
+//        let users:[String] = (chatObject.objectForKey("users") as! [String])
+//        if users[0] == (PFUser.currentUser()?.objectForKey("Name") as! String){
+//            self.nameLabel.text = users[1]
+//        }else{
+//            self.nameLabel.text = users[0]
+//
+//        }
     }
+    
+    
     
 }

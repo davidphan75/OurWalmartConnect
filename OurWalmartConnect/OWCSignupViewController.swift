@@ -170,9 +170,7 @@ class OWCSignupViewController: UIViewController,UITextFieldDelegate,userDidSelec
        
     }
     
-    @IBAction func tappedScree(sender: AnyObject) {
-        self.activeField?.resignFirstResponder()
-    }
+
     @IBAction func backButtonPressed(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
