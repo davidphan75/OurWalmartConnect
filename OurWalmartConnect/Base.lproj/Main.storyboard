@@ -812,11 +812,11 @@
             </objects>
             <point key="canvasLocation" x="2929" y="1743"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="Tiw-XO-fS0">
             <objects>
                 <navigationController id="siM-rq-k7f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="infoIcon" selectedImage="infoIcon" id="zqP-QF-7Nd"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="infoIcon" selectedImage="infoIcon" id="zqP-QF-7Nd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ql9-do-6do">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
