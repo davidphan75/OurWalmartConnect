@@ -70,7 +70,32 @@ class OWCConnectMainView: UIViewController,UISearchBarDelegate, MKMapViewDelegat
     
 
     @IBAction func segmentControllChanged(sender: AnyObject) {
-        
+        self.searchBar.resignFirstResponder()
+        switch self.connectSegmentedControl.selectedSegmentIndex{
+        case 0:
+            let query = PFQuery(className: "walmartLocations")
+            query.whereKey("City", matchesRegex: self.searchBar.text!,modifiers: "i")
+            
+            let currentLocation = PFGeoPoint(location: OWCLocationManager.sharedInstance.userLocation)
+            query.whereKeyExists("Location")
+            query.whereKey("Location", nearGeoPoint: currentLocation, withinMiles: 100)
+            self.connectDataManager?.loadDataFromQuery(query)
+            
+        case 1:
+            
+            self.searchBar.text = ""
+            let query = PFUser.query()
+            query!.whereKey("isAdvisor", equalTo: true)
+            self.connectDataManager?.loadDataFromQuery(query!)
+            
+        case 2:
+            self.searchBar.text = ""
+            self.connectDataManager?.tableViewObjects.removeAll()
+            self.childVC?.tableView.reloadData()
+        default:
+            break
+            
+        }
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
@@ -175,6 +200,9 @@ class OWCConnectMainView: UIViewController,UISearchBarDelegate, MKMapViewDelegat
        
     }
     
+    @IBAction func tapRecongnizer(sender: AnyObject) {
+        self.searchBar.resignFirstResponder()
+    }
     /*
     // MARK: - Navigation
 
