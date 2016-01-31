@@ -66,6 +66,15 @@ class OWCLoginViewController: UIViewController, MBProgressHUDDelegate, UITextFie
         
         
     }
+    @IBAction func tappedScreen(sender: AnyObject) {
+        self.emailTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 
     @IBAction func backButtonPressed(sender: AnyObject) {
