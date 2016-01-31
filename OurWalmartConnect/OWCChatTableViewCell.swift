@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ParseUI
 
 class OWCChatTableViewCell: UITableViewCell {
 
@@ -14,6 +15,7 @@ class OWCChatTableViewCell: UITableViewCell {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var profileImageView: PFImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

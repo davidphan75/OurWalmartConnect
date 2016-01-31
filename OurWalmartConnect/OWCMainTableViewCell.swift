@@ -26,6 +26,8 @@ class OWCMainTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        profileImageView.layer.cornerRadius = profileImageView.layer.frame.height/2
+        profileImageView.clipsToBounds = true
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

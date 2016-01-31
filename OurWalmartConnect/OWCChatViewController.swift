@@ -154,8 +154,8 @@ class OWCChatViewController: JSQMessagesViewController {
         object["ChatID"] = self.aChatManager!.ChatID
         object["ChatText"] = text
         object.saveInBackground()
-        self.aChatManager!.lastMessageLoaded = object
-        self.aChatManager!.lastMessageLoaded?.saveInBackground()
+        self.aChatManager!.currentChat?.setObject("text", forKey: "lastMessage")
+        self.aChatManager!.currentChat?.saveInBackground()
         
         self.finishSendingMessage()
     }
