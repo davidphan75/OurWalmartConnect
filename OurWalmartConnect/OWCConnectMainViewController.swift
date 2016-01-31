@@ -38,6 +38,7 @@ class OWCConnectMainView: UIViewController,UISearchBarDelegate, MKMapViewDelegat
         
         //Mapping
         self.mapView.delegate = self
+        self.connectSegmentedControl.tintColor = OWCGreen
         
         
         childVC = self.childViewControllers.first as? OWCConnectTableViewController

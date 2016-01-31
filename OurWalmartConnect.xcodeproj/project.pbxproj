@@ -116,6 +116,7 @@
 		B1D7021E1C5D7A1100FA0D2C /* OWCFourmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */; };
 		B1D702241C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D702231C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift */; };
 		B1D702261C5DA10F00FA0D2C /* OWCConnectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D702251C5DA10F00FA0D2C /* OWCConnectTableViewController.swift */; };
+		B1EF366C1C5E8BA5003D4586 /* OWCInformTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF366B1C5E8BA5003D4586 /* OWCInformTableViewController.swift */; };
 		B7F847611C5E069D006BAD73 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F847601C5E069D006BAD73 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
@@ -299,6 +300,7 @@
 		B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCFourmHandler.swift; sourceTree = "<group>"; };
 		B1D702231C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectMainViewController.swift; sourceTree = "<group>"; };
 		B1D702251C5DA10F00FA0D2C /* OWCConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectTableViewController.swift; sourceTree = "<group>"; };
+		B1EF366B1C5E8BA5003D4586 /* OWCInformTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCInformTableViewController.swift; sourceTree = "<group>"; };
 		B7F8475E1C5E069D006BAD73 /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
 		B7F8475F1C5E069D006BAD73 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		B7F847601C5E069D006BAD73 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		B103D6091C5CC297006A68C5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				B1EF366A1C5E8B90003D4586 /* inform */,
 				B12CF3261C5E2AAC00952E2E /* OWCMainTabBarController.swift */,
 				B1D702221C5DA0C800FA0D2C /* Connect */,
 				B103D6131C5CCAAA006A68C5 /* More */,
@@ -746,6 +749,14 @@
 			name = Connect;
 			sourceTree = "<group>";
 		};
+		B1EF366A1C5E8B90003D4586 /* inform */ = {
+			isa = PBXGroup;
+			children = (
+				B1EF366B1C5E8BA5003D4586 /* OWCInformTableViewController.swift */,
+			);
+			name = inform;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -906,6 +917,7 @@
 				B103D6171C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift in Sources */,
 				B1D2E10B1C5C505A009A5A3B /* OWCAppConstants.swift in Sources */,
 				B103D6191C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift in Sources */,
+				B1EF366C1C5E8BA5003D4586 /* OWCInformTableViewController.swift in Sources */,
 				B12CF3271C5E2AAC00952E2E /* OWCMainTabBarController.swift in Sources */,
 				B12CF32A1C5E3B7C00952E2E /* OWCPostFourmPage1ViewController.swift in Sources */,
 				B17355F21C5E02420063A020 /* JSQMessagesAvatarImage.m in Sources */,

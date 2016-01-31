@@ -25,6 +25,8 @@ class OWCMoreProfileMainViewController: UIViewController {
             user = PFUser.currentUser()
         }
         self.nameLabel.text = user!.objectForKey("Name") as? String
+        self.profileImageView.layer.cornerRadius = self.profileImageView.layer.frame.height/2
+        self.profileImageView.clipsToBounds = true
         
         if user?.objectForKey("profileImage") != nil{
             self.profileImageView.file = user?.objectForKey("profileImage") as? PFFile
