@@ -330,7 +330,7 @@
         <scene sceneID="a8k-Bs-QAC">
             <objects>
                 <navigationController id="SrV-Fz-LFI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" id="jtq-ql-1rr"/>
+                    <tabBarItem key="tabBarItem" title="Chat" image="chaticon" selectedImage="chaticon" id="jtq-ql-1rr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Qh-Ox-OzT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -597,7 +597,7 @@
         <scene sceneID="TMq-6q-Qnx">
             <objects>
                 <navigationController id="uhK-Ou-0bx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Main" id="JIB-uw-oTt"/>
+                    <tabBarItem key="tabBarItem" title="Main" image="mainicon" id="JIB-uw-oTt"/>
                     <navigationItem key="navigationItem" id="B6Q-5Y-gep"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xth-hx-9Ga">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -816,7 +816,7 @@
         <scene sceneID="Tiw-XO-fS0">
             <objects>
                 <navigationController id="siM-rq-k7f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="close" selectedImage="redoBtn" id="zqP-QF-7Nd"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="infoIcon" selectedImage="redoBtn" id="zqP-QF-7Nd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ql9-do-6do">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -833,7 +833,7 @@
         <scene sceneID="R65-EM-k6h">
             <objects>
                 <navigationController id="mLR-3P-Rga" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Connect" id="YUO-7r-tX0"/>
+                    <tabBarItem key="tabBarItem" title="Connect" image="connecticon" selectedImage="connecticon" id="YUO-7r-tX0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EsX-ao-ThL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -850,7 +850,7 @@
         <scene sceneID="OJN-4C-vKP">
             <objects>
                 <navigationController id="Lam-Cz-GxP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" selectedImage="close" id="D2a-zZ-uun"/>
+                    <tabBarItem key="tabBarItem" title="More" image="moreicon" selectedImage="close" id="D2a-zZ-uun"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iSI-RJ-vZf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1583,8 +1583,13 @@
         <image name="Back Arrow1x" width="12" height="19"/>
         <image name="Intro Logo" width="424" height="444"/>
         <image name="Line" width="680" height="2"/>
+        <image name="chaticon" width="24" height="24"/>
         <image name="close" width="57" height="57"/>
+        <image name="connecticon" width="22" height="22"/>
+        <image name="infoIcon" width="22" height="23"/>
         <image name="locationButton" width="57" height="57"/>
+        <image name="mainicon" width="20" height="20"/>
+        <image name="moreicon" width="24" height="15"/>
         <image name="redoBtn" width="57" height="57"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
