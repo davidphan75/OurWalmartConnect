@@ -8,16 +8,24 @@
 
 import UIKit
 
-class OWCLoginViewController: UIViewController {
+class OWCLoginViewController: UIViewController, MBProgressHUDDelegate, UITextFieldDelegate  {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var HUD: MBProgressHUD!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //Initialize loading indicator
+        HUD = MBProgressHUD(view: self.view)
+        view.addSubview(self.HUD)
+        HUD.mode = MBProgressHUDModeIndeterminate
+        HUD.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,22 +37,27 @@ class OWCLoginViewController: UIViewController {
         
 
 
-    
-
-        PFUser.logOut()
-        PFUser.logInWithUsernameInBackground(self.emailTextField.text!, password: self.passwordTextField.text!, block: { (user, error) -> Void in
-            
-            // REMOVE BEFORE RELEASE
-            if error != nil {
-                print("logged in")
+        HUD.show(true)
+        OWCParseLoginHandler.signIn(username: emailTextField.text!, password: passwordTextField.text!) { (success, error) -> Void in
+            if success {
+                self.performSegueWithIdentifier("loggedIn", sender: nil)
             } else {
-                print("error loggin in")
+                switch error! {
+                case .usernameOrPasswordIncorrect:
+                    self.HUD.hide(true)
+                    let alertController = UIAlertController(title: "Error!", message: "The username or password are incorrect. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                                        
+                case .usernameOrPasswordEmpty:
+                    self.HUD?.hide(true)
+                    let alertView = UIAlertView(title: "Oops!", message: "Make sure you enter the Username and Password!", delegate: nil, cancelButtonTitle: "OK")
+                    alertView.show()
+                }
             }
-            
-            
-        })
+        }
+
         
-        self.performSegueWithIdentifier("loggedIn", sender: nil)
         
         
     }
