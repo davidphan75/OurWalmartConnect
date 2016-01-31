@@ -10,7 +10,6 @@
 		B103D60C1C5CC305006A68C5 /* OWCMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D60B1C5CC305006A68C5 /* OWCMainTableViewController.swift */; };
 		B103D6111C5CC4F6006A68C5 /* OWCMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D60F1C5CC4F6006A68C5 /* OWCMainTableViewCell.swift */; };
 		B103D6121C5CC4F6006A68C5 /* OWCMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B103D6101C5CC4F6006A68C5 /* OWCMainTableViewCell.xib */; };
-		B103D6151C5CCACF006A68C5 /* OWCMoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D6141C5CCACF006A68C5 /* OWCMoreTableViewController.swift */; };
 		B103D6171C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D6161C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift */; };
 		B103D6191C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D6181C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift */; };
 		B103D61B1C5CDB3F006A68C5 /* OWCWalmartLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */; };
@@ -48,6 +47,8 @@
 		B175C6381C5C3E99002CF263 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B175C6351C5C3E99002CF263 /* FBSDKShareKit.framework */; };
 		B17B3ADC1C5D64E000DC70D6 /* OWCSignupHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B3ADB1C5D64E000DC70D6 /* OWCSignupHandler.swift */; };
 		B17B3ADE1C5D653300DC70D6 /* OWCParseLoginHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17B3ADD1C5D653300DC70D6 /* OWCParseLoginHandler.swift */; };
+		B197B34F1C5DE3700091035D /* OWCMoreProfileMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197B34E1C5DE3700091035D /* OWCMoreProfileMainViewController.swift */; };
+		B197B3511C5DE86E0091035D /* OWCMoreProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B197B3501C5DE86E0091035D /* OWCMoreProfileDetailViewController.swift */; };
 		B1C262A71C5C418300A44BE3 /* OWCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C262A61C5C418300A44BE3 /* OWCLoginViewController.swift */; };
 		B1C262A91C5C419A00A44BE3 /* OWCSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C262A81C5C419A00A44BE3 /* OWCSignupViewController.swift */; };
 		B1C262AB1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C262AA1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift */; };
@@ -133,7 +134,6 @@
 		B103D60B1C5CC305006A68C5 /* OWCMainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMainTableViewController.swift; sourceTree = "<group>"; };
 		B103D60F1C5CC4F6006A68C5 /* OWCMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMainTableViewCell.swift; sourceTree = "<group>"; };
 		B103D6101C5CC4F6006A68C5 /* OWCMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OWCMainTableViewCell.xib; sourceTree = "<group>"; };
-		B103D6141C5CCACF006A68C5 /* OWCMoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMoreTableViewController.swift; sourceTree = "<group>"; };
 		B103D6161C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSignUpUserOptionTableViewController.swift; sourceTree = "<group>"; };
 		B103D6181C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSelectStoreViewController.swift; sourceTree = "<group>"; };
 		B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCWalmartLocation.swift; sourceTree = "<group>"; };
@@ -177,6 +177,8 @@
 		B175C6351C5C3E99002CF263 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		B17B3ADB1C5D64E000DC70D6 /* OWCSignupHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSignupHandler.swift; sourceTree = "<group>"; };
 		B17B3ADD1C5D653300DC70D6 /* OWCParseLoginHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCParseLoginHandler.swift; sourceTree = "<group>"; };
+		B197B34E1C5DE3700091035D /* OWCMoreProfileMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMoreProfileMainViewController.swift; sourceTree = "<group>"; };
+		B197B3501C5DE86E0091035D /* OWCMoreProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCMoreProfileDetailViewController.swift; sourceTree = "<group>"; };
 		B1C262A61C5C418300A44BE3 /* OWCLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCLoginViewController.swift; sourceTree = "<group>"; };
 		B1C262A81C5C419A00A44BE3 /* OWCSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSignupViewController.swift; sourceTree = "<group>"; };
 		B1C262AA1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCFirstLaunchViewController.swift; sourceTree = "<group>"; };
@@ -377,7 +379,8 @@
 		B103D6131C5CCAAA006A68C5 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				B103D6141C5CCACF006A68C5 /* OWCMoreTableViewController.swift */,
+				B197B34E1C5DE3700091035D /* OWCMoreProfileMainViewController.swift */,
+				B197B3501C5DE86E0091035D /* OWCMoreProfileDetailViewController.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -886,10 +889,12 @@
 			files = (
 				B1C2631F1C5C46CE00A44BE3 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				B103D60C1C5CC305006A68C5 /* OWCMainTableViewController.swift in Sources */,
+				B197B3511C5DE86E0091035D /* OWCMoreProfileDetailViewController.swift in Sources */,
 				B1C2633C1C5C46CE00A44BE3 /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
 				B1D702241C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift in Sources */,
 				B1C263271C5C46CE00A44BE3 /* JSQMediaItem.m in Sources */,
 				B1C263281C5C46CE00A44BE3 /* JSQMessage.m in Sources */,
+				B197B34F1C5DE3700091035D /* OWCMoreProfileMainViewController.swift in Sources */,
 				B103D6171C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift in Sources */,
 				B1C2632E1C5C46CE00A44BE3 /* JSQMessagesCollectionView.m in Sources */,
 				B1C263241C5C46CE00A44BE3 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
@@ -945,7 +950,6 @@
 				B1D2E1151C5C6FFB009A5A3B /* OWCTableViewDataManager.swift in Sources */,
 				B1D2E1051C5C4F26009A5A3B /* OWCChatManager.swift in Sources */,
 				B17B3ADE1C5D653300DC70D6 /* OWCParseLoginHandler.swift in Sources */,
-				B103D6151C5CCACF006A68C5 /* OWCMoreTableViewController.swift in Sources */,
 				B1C263141C5C46CE00A44BE3 /* NSBundle+JSQMessages.m in Sources */,
 				B1D2E1091C5C5037009A5A3B /* ParseFunctions.swift in Sources */,
 				B1C263291C5C46CE00A44BE3 /* JSQMessagesAvatarImage.m in Sources */,

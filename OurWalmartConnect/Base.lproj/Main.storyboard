@@ -167,9 +167,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="SNP-1S-zOH"/>
-                    <connections>
-                        <segue destination="3BP-RP-YJA" kind="show" identifier="startChat" id="ybB-iG-spu"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="713-R1-hmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="3676" y="316"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--More Profile Main View Controller-->
         <scene sceneID="fMo-IJ-QJj">
             <objects>
-                <viewController id="3BP-RP-YJA" customClass="OWCChatViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3BP-RP-YJA" customClass="OWCMoreProfileMainViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vDL-SX-XQc"/>
                         <viewControllerLayoutGuide type="bottom" id="tOJ-Gt-j6m"/>
@@ -236,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cQ-1T-nuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676" y="1006"/>
+            <point key="canvasLocation" x="3716" y="2535"/>
         </scene>
         <!--Chat-->
         <scene sceneID="a8k-Bs-QAC">
@@ -344,9 +341,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="X5o-RD-hgc" kind="show" id="w3x-ak-maV"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZRM-jP-sQS">
                                         <rect key="frame" x="0.0" y="108" width="600" height="44"/>
@@ -379,6 +373,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="3BP-RP-YJA" kind="show" id="aCh-BA-ebZ"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KXC-Va-92p">
                                         <rect key="frame" x="0.0" y="196" width="600" height="44"/>
@@ -425,24 +422,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xb4-7t-3xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2929" y="2535"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OKE-64-dEs">
-            <objects>
-                <viewController id="X5o-RD-hgc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NVN-sq-sUx"/>
-                        <viewControllerLayoutGuide type="bottom" id="6WJ-sw-QjH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="He3-Wy-LD9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zdz-H3-vfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3720" y="2535"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Qa8-hV-xz4">
@@ -892,10 +871,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uv6-sT-Amu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--More Profile Detail View Controller-->
         <scene sceneID="1lU-4H-Af7">
             <objects>
-                <viewController id="kSQ-xh-fkW" sceneMemberID="viewController">
+                <viewController id="kSQ-xh-fkW" customClass="OWCMoreProfileDetailViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ARM-pR-AZj"/>
+                        <viewControllerLayoutGuide type="bottom" id="R90-Bf-qKi"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zUf-dP-c33">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="257"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -930,13 +913,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bkc-UU-Fgw">
+                                <rect key="frame" x="20" y="160" width="560" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="bioTextView" destination="bkc-UU-Fgw" id="7QZ-VW-rOY"/>
+                        <outlet property="nameLabel" destination="RVz-3g-dfe" id="uYc-EW-JZ1"/>
+                        <outlet property="storeLabel" destination="1Qp-mW-6zT" id="XXT-3Q-xVh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIj-6t-o6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676" y="1662.5"/>
+            <point key="canvasLocation" x="3716" y="3191.5"/>
         </scene>
     </scenes>
     <resources>
