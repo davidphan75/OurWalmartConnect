@@ -11,10 +11,9 @@ import Foundation
 enum OWCLoginError {
     case usernameOrPasswordIncorrect
     case usernameOrPasswordEmpty
-    case emailNotVerified
 }
 
-class OWCLoginHandler {
+class OWCParseLoginHandler {
     class func signIn(username username: String, password: String, completion: (success: Bool, error: OWCLoginError?) -> Void) {
         let debugMode = true
         
@@ -29,15 +28,6 @@ class OWCLoginHandler {
                 } else if error != nil {
                     completion(success: false, error: .usernameOrPasswordIncorrect)
                     
-                } else {
-                    if user!["emailVerified"] as? Bool == true {
-                        completion(success: true, error: nil)
-                        
-                    } else {
-                        user!["emailVerified"] = false
-                        user!.saveInBackground()
-                        completion(success: false, error: .emailNotVerified)
-                    }
                 }
                 }
             )}
