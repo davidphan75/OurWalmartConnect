@@ -14,7 +14,6 @@
 		B103D6191C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D6181C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift */; };
 		B103D61B1C5CDB3F006A68C5 /* OWCWalmartLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */; };
 		B103D61D1C5CDEA6006A68C5 /* OWCLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B103D61C1C5CDEA6006A68C5 /* OWCLocationManager.swift */; };
-		B132AD741C5E05A700D458FA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B132AD731C5E05A700D458FA /* MBProgressHUD.m */; };
 		B160D97E1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160D97D1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift */; };
 		B160D9811C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B160D97F1C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift */; };
 		B160D9821C5DC51F00824249 /* OWCConnectWalmartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B160D9801C5DC51F00824249 /* OWCConnectWalmartTableViewCell.xib */; };
@@ -111,6 +110,7 @@
 		B1D7021E1C5D7A1100FA0D2C /* OWCFourmHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */; };
 		B1D702241C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D702231C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift */; };
 		B1D702261C5DA10F00FA0D2C /* OWCConnectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D702251C5DA10F00FA0D2C /* OWCConnectTableViewController.swift */; };
+		B7F847611C5E069D006BAD73 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B7F847601C5E069D006BAD73 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,9 +138,6 @@
 		B103D6181C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCSelectStoreViewController.swift; sourceTree = "<group>"; };
 		B103D61A1C5CDB3F006A68C5 /* OWCWalmartLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCWalmartLocation.swift; sourceTree = "<group>"; };
 		B103D61C1C5CDEA6006A68C5 /* OWCLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCLocationManager.swift; sourceTree = "<group>"; };
-		B132AD711C5E05A700D458FA /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		B132AD721C5E05A700D458FA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		B132AD731C5E05A700D458FA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B160D97D1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectTableViewDataManager.swift; sourceTree = "<group>"; };
 		B160D97F1C5DC51F00824249 /* OWCConnectWalmartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectWalmartTableViewCell.swift; sourceTree = "<group>"; };
 		B160D9801C5DC51F00824249 /* OWCConnectWalmartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OWCConnectWalmartTableViewCell.xib; sourceTree = "<group>"; };
@@ -290,6 +287,9 @@
 		B1D7021D1C5D7A1100FA0D2C /* OWCFourmHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCFourmHandler.swift; sourceTree = "<group>"; };
 		B1D702231C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectMainViewController.swift; sourceTree = "<group>"; };
 		B1D702251C5DA10F00FA0D2C /* OWCConnectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWCConnectTableViewController.swift; sourceTree = "<group>"; };
+		B7F8475E1C5E069D006BAD73 /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		B7F8475F1C5E069D006BAD73 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B7F847601C5E069D006BAD73 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -693,7 +693,9 @@
 			isa = PBXGroup;
 			children = (
 				B1D2E1031C5C4DD9009A5A3B /* OurWalmart-Bridging-Header.h */,
-				B1D2E1121C5C6F18009A5A3B /* MBProgressHUD */,
+				B7F8475E1C5E069D006BAD73 /* MBProgressHUD-Prefix.pch */,
+				B7F8475F1C5E069D006BAD73 /* MBProgressHUD.h */,
+				B7F847601C5E069D006BAD73 /* MBProgressHUD.m */,
 			);
 			name = ObjectiveC;
 			sourceTree = "<group>";
@@ -706,17 +708,6 @@
 				B160D97D1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift */,
 			);
 			name = Utility;
-			sourceTree = "<group>";
-		};
-		B1D2E1121C5C6F18009A5A3B /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				B132AD711C5E05A700D458FA /* MBProgressHUD-Prefix.pch */,
-				B132AD721C5E05A700D458FA /* MBProgressHUD.h */,
-				B132AD731C5E05A700D458FA /* MBProgressHUD.m */,
-			);
-			name = MBProgressHUD;
-			path = ../../Deckstr/Deckstr;
 			sourceTree = "<group>";
 		};
 		B1D702221C5DA0C800FA0D2C /* Connect */ = {
@@ -884,7 +875,7 @@
 				B197B3511C5DE86E0091035D /* OWCMoreProfileDetailViewController.swift in Sources */,
 				B1D702241C5DA0DE00FA0D2C /* OWCConnectMainViewController.swift in Sources */,
 				B197B34F1C5DE3700091035D /* OWCMoreProfileMainViewController.swift in Sources */,
-				B132AD741C5E05A700D458FA /* MBProgressHUD.m in Sources */,
+				B7F847611C5E069D006BAD73 /* MBProgressHUD.m in Sources */,
 				B17355DF1C5E02420063A020 /* UIDevice+JSQMessages.m in Sources */,
 				B103D6171C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift in Sources */,
 				B1D2E10B1C5C505A009A5A3B /* OWCAppConstants.swift in Sources */,
