@@ -107,61 +107,67 @@ class OWCSignupViewController: UIViewController,UITextFieldDelegate,userDidSelec
         if isAdvisor == false{
             self.advisorCode = ""
         }
-        OWCSignUpHandler.signUp(storeLocation: self.selectedWalmart!, password: passwordTextField.text!, email: emailTextField.text!, advisorCode:self.advisorCode!, isAdvisor: self.isAdvisor!, name: self.nameTextField.text!) { (success, error) -> Void in
-            if success {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DSCustomTabBarController")
-                    //self.performSegueWithIdentifier("signedUp", sender: self)
-                    //self.parentVC!.performSegueWithIdentifier("loggedIn", sender: nil)
-                    
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("mainTabBar")
-                    self.presentViewController(viewController, animated: true, completion: nil)
-
-                })
-            } else {
-                switch error! {
-                case .storeLocation:
-                    self.HUD.hide(true)
-                    let alertController = UIAlertController(title: "Error!", message: "Please select a store location. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    // getUserDetailsFromLinkedIn()
-                    
-                    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DSCustomTabBarController")
-                    self.presentViewController(viewController, animated: true, completion: nil)
-                    
-                case .emailInvalid:
-                    self.HUD?.hide(true)
-                    let alertController = UIAlertController(title: "Error!", message: "The email address is invalid. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
-                    
-                case .passwordInvalid:
-                    self.HUD?.hide(true)
-                    let alertController = UIAlertController(title: "Error!", message: "The password needs to be more than 8 characters. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
-                    
-                case .passwordNotMatching:
-                    self.HUD?.hide(true)
-                    let alertController = UIAlertController(title: "Error!", message: "The passwords do not match. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
-                    alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alertController, animated: true, completion: nil)
-                    
-                case .advisorCode:
-                    self.HUD?.hide(true)
-                    let alertView = UIAlertView(title: "Error!", message: "Invalid Advisor Code.", delegate: nil, cancelButtonTitle: "OK")
-                    alertView.show()
-
-                case .errorInSignUp:
-                    self.HUD?.hide(true)
-                    let alertView = UIAlertView(title: "Oops!", message: "Something went wrong! Please try again.", delegate: nil, cancelButtonTitle: "OK")
-                    alertView.show()
-                    
-                    
+        
+        if self.storeLocationTextField.text == ""{
+            let alertView = UIAlertView(title: "Error!", message: "Please Select a Store Location", delegate: nil, cancelButtonTitle: "OK")
+            alertView.show()
+            HUD.hide(true)
+        }else{
+            OWCSignUpHandler.signUp(storeLocation: self.selectedWalmart!, password: passwordTextField.text!, email: emailTextField.text!, advisorCode:self.advisorCode!, isAdvisor: self.isAdvisor!, name: self.nameTextField.text!) { (success, error) -> Void in
+                if success {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("mainTabBar")
+                        self.presentViewController(viewController, animated: true, completion: nil)
+                        
+                    })
+                } else {
+                    switch error! {
+                    case .storeLocation:
+                        self.HUD.hide(true)
+                        let alertController = UIAlertController(title: "Error!", message: "Please select a store location. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                        // getUserDetailsFromLinkedIn()
+                        
+                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DSCustomTabBarController")
+                        self.presentViewController(viewController, animated: true, completion: nil)
+                        
+                    case .emailInvalid:
+                        self.HUD?.hide(true)
+                        let alertController = UIAlertController(title: "Error!", message: "The email address is invalid. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        
+                    case .passwordInvalid:
+                        self.HUD?.hide(true)
+                        let alertController = UIAlertController(title: "Error!", message: "The password needs to be more than 8 characters. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        
+                    case .passwordNotMatching:
+                        self.HUD?.hide(true)
+                        let alertController = UIAlertController(title: "Error!", message: "The passwords do not match. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                        self.presentViewController(alertController, animated: true, completion: nil)
+                        
+                    case .advisorCode:
+                        self.HUD?.hide(true)
+                        let alertView = UIAlertView(title: "Error!", message: "Invalid Advisor Code.", delegate: nil, cancelButtonTitle: "OK")
+                        alertView.show()
+                        
+                    case .errorInSignUp:
+                        self.HUD?.hide(true)
+                        let alertView = UIAlertView(title: "Oops!", message: "Something went wrong! Please try again.", delegate: nil, cancelButtonTitle: "OK")
+                        alertView.show()
+                        
+                        
+                    }
                 }
             }
-        }
 
+        }
+        
+       
     }
     
     @IBAction func tappedScree(sender: AnyObject) {
