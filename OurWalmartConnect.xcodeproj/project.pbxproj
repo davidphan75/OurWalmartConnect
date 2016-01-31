@@ -340,6 +340,7 @@
 		B103D6091C5CC297006A68C5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				B132AD771C5E0D6B00D458FA /* OWCMainTabBarController.swift */,
 				B1D702221C5DA0C800FA0D2C /* Connect */,
 				B103D6131C5CCAAA006A68C5 /* More */,
 				B103D60A1C5CC29F006A68C5 /* Main */,
@@ -381,6 +382,7 @@
 			children = (
 				B197B34E1C5DE3700091035D /* OWCMoreProfileMainViewController.swift */,
 				B197B3501C5DE86E0091035D /* OWCMoreProfileDetailViewController.swift */,
+				B132AD751C5E0A9E00D458FA /* OWCMoreMainTableViewController.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -880,6 +882,7 @@
 				B103D6171C5CD5CD006A68C5 /* OWCSignUpUserOptionTableViewController.swift in Sources */,
 				B1D2E10B1C5C505A009A5A3B /* OWCAppConstants.swift in Sources */,
 				B103D6191C5CD9AA006A68C5 /* OWCSelectStoreViewController.swift in Sources */,
+				B132AD781C5E0D6B00D458FA /* OWCMainTabBarController.swift in Sources */,
 				B17355F21C5E02420063A020 /* JSQMessagesAvatarImage.m in Sources */,
 				B1C262AB1C5C451600A44BE3 /* OWCFirstLaunchViewController.swift in Sources */,
 				B17355F01C5E02420063A020 /* JSQMediaItem.m in Sources */,
@@ -892,6 +895,7 @@
 				B17355EE1C5E02420063A020 /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */,
 				B160D97E1C5DB9E200824249 /* OWCConnectTableViewDataManager.swift in Sources */,
 				B103D6111C5CC4F6006A68C5 /* OWCMainTableViewCell.swift in Sources */,
+				B132AD761C5E0A9E00D458FA /* OWCMoreMainTableViewController.swift in Sources */,
 				B1D2E1071C5C4F99009A5A3B /* OWCChatMessage.swift in Sources */,
 				B17355E71C5E02420063A020 /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				B17355E01C5E02420063A020 /* UIImage+JSQMessages.m in Sources */,

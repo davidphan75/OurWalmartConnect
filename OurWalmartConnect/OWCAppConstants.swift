@@ -7,3 +7,5 @@
 //
 
 import Foundation
+
+let storyboard = UIStoryboard(name: "Main", bundle: nil)

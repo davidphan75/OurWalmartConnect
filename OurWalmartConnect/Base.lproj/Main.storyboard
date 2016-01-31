@@ -72,7 +72,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bFh-EG-Njd">
             <objects>
-                <tabBarController id="Dxt-xT-IIJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBar" id="Dxt-xT-IIJ" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="RN3-iQ-h1I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -346,7 +346,7 @@
         <!--Root View Controller-->
         <scene sceneID="wxg-Vf-Yvy">
             <objects>
-                <tableViewController id="wSo-PB-zhx" customClass="OWCMoreTableViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wSo-PB-zhx" customClass="OWCMoreMainTableViewController" customModule="OurWalmartConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bw3-NY-Tzm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,8 +428,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMC-T9-d8x">
-                                                    <rect key="frame" x="281" y="11" width="38" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMC-T9-d8x">
+                                                    <rect key="frame" x="265" y="11" width="54" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -446,6 +446,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="XCH-EQ-qai"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="returnToLogin" id="e9R-7b-g0T"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xb4-7t-3xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
