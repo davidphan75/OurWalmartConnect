@@ -15,6 +15,7 @@ class OWCConnectMainView: UIViewController,UISearchBarDelegate, MKMapViewDelegat
     
     @IBOutlet weak var searchBar: UISearchBar!
     let reuseID = "walmartPin"
+    var selectedIndex:NSIndexPath?
     
     
     var connectDataManager:OWCConnectTableViewDataManager?
@@ -53,12 +54,12 @@ class OWCConnectMainView: UIViewController,UISearchBarDelegate, MKMapViewDelegat
         self.connectDataManager?.delegate = self
         
         //Segment control initially set to walmart
-        self.connectSegmentedControl.selectedSegmentIndex = 0
+        //self.connectSegmentedControl.selectedSegmentIndex = 0
         
     }
     
     override func viewWillAppear(animated: Bool) {
-        if let loc = location {
+        if self.connectSegmentedControl.selectedSegmentIndex == 0{
             centerOnUserLocation(animated: true)
             self.addWalmartLocationToMap()
         }
@@ -204,14 +205,18 @@ class OWCConnectMainView: UIViewController,UISearchBarDelegate, MKMapViewDelegat
     @IBAction func tapRecongnizer(sender: AnyObject) {
         self.searchBar.resignFirstResponder()
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showProfile"{
+            let vc = segue.destinationViewController as! OWCMoreProfileMainViewController
+            vc.user = self.connectDataManager?.tableViewObjects[selectedIndex!.row] as! PFUser
+        }
     }
-    */
+
 
 }

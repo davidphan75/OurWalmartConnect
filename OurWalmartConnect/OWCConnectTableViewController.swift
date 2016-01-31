@@ -61,6 +61,16 @@ class OWCConnectTableViewController: UITableViewController {
     }
 
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (self.parentViewController as! OWCConnectMainView).connectSegmentedControl.selectedSegmentIndex == 0{
+            
+        }else{
+           (self.parentViewController as! OWCConnectMainView).selectedIndex = indexPath
+            (self.parentViewController as! OWCConnectMainView).performSegueWithIdentifier("showProfile", sender: nil)
+        }
+
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

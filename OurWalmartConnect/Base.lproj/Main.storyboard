@@ -166,6 +166,7 @@
                         <outlet property="connectSegmentedControl" destination="UbM-ty-vmU" id="oaA-8Y-h4F"/>
                         <outlet property="mapView" destination="WBW-wC-DQs" id="9cI-Lc-dDu"/>
                         <outlet property="searchBar" destination="6V3-Xd-TRU" id="Jry-wI-kko"/>
+                        <segue destination="3BP-RP-YJA" kind="show" identifier="showProfile" id="q31-Y8-60o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nS-hc-0Wc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,7 +176,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3741" y="316"/>
+            <point key="canvasLocation" x="3789" y="182"/>
         </scene>
         <!--Chat-->
         <scene sceneID="efh-io-ITA">
@@ -253,7 +254,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xoo-wc-0XN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4488" y="315.5"/>
+            <point key="canvasLocation" x="4420" y="409.5"/>
         </scene>
         <!--More Profile Main View Controller-->
         <scene sceneID="fMo-IJ-QJj">
@@ -326,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cQ-1T-nuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3716" y="2535"/>
+            <point key="canvasLocation" x="4842" y="-53"/>
         </scene>
         <!--Chat-->
         <scene sceneID="a8k-Bs-QAC">
@@ -1502,7 +1503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIj-6t-o6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3716" y="3191"/>
+            <point key="canvasLocation" x="5428" y="671"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dCA-w8-A86">
@@ -1572,5 +1573,8 @@
         <image name="moreicon" width="24" height="15"/>
         <image name="redoBtn" width="57" height="57"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="q31-Y8-60o"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
